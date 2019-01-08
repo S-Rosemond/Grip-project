@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import FirstPage from './FirstPage';
 import '../styles/App.scss';
 
@@ -18,8 +18,12 @@ export default class App extends Component {
 		const { dir } = this.state;
 
 		switch (dir) {
-			case 0:
-				return <FirstPage changePage={this.changePage} handleChange={this.handleChange} />;
+			default:
+				return (
+					<Fragment>
+						<FirstPage changePage={this.changePage} handleChange={this.handleChange} />
+					</Fragment>
+				);
 		}
 	}
 }

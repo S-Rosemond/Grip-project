@@ -1,10 +1,11 @@
 import React from 'react';
-//import moduleName from 'module';
-import NavBar from './NavBar';
+import NavBar from '../components/NavBar';
+import InfoSection from '../components/InfoSection';
 
 const FirstPage = props => (
 	<div>
 		<NavBar />
+		<InfoSection />
 	</div>
 );
 
