@@ -53,6 +53,7 @@ const styles = theme => ({
 		flexShrink: 0
 	},
 	drawerPaper: {
+		fontFamily: 'ultra',
 		width: drawerWidth
 	},
 	drawerHeader: {
@@ -118,7 +119,7 @@ class PersistentDrawerLeft extends React.Component {
 						>
 							<MenuIcon />
 						</IconButton>
-						<Typography variant="title" color="inherit" noWrap>
+						<Typography variant="h6" color="secondary" style={{ fontFamily: 'ultra' }}>
 							WILD TIGER THAI RESTAURANT AND BAR
 						</Typography>
 					</Toolbar>
@@ -138,16 +139,23 @@ class PersistentDrawerLeft extends React.Component {
 						</IconButton>
 					</div>
 					{['Home', 'Menu', 'Dessert', 'Beverages'].map((text, index) => {
-						const svgIcons = [<HomeIcon />, <MenuCartIcon />, <DessertIcon />, <DrinksIcon />];
+						const svgIcons = [
+							<HomeIcon key={index} />,
+							<MenuCartIcon key={index} />,
+							<DessertIcon key={index} />,
+							<DrinksIcon />
+						];
 						return (
 							<Fragment>
 								<Divider />
-								<List>
-									<ListItem button key={text}>
-										<ListItemIcon>{svgIcons[index]}</ListItemIcon>
-										<ListItemText primary={text} />
-									</ListItem>
-								</List>
+								<ListItemLink href={`/${text}`}>
+									<List>
+										<ListItem key={text}>
+											<ListItemIcon key={text[index]}>{svgIcons[index]}</ListItemIcon>
+											<ListItemText primary={text} key={`${text}${index}${text}`} />
+										</ListItem>
+									</List>
+								</ListItemLink>
 							</Fragment>
 						);
 					})}
