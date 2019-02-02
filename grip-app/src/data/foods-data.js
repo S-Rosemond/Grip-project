@@ -94,3 +94,46 @@ export const wontonSoup = [
 		price: 8.0
 	}
 ];
+
+export const salads = [
+	{
+		title: 'House Salad',
+		info:
+			'​Crispy tofu, hard boiled egg, lettuce, cucumber, grape tomato, red onion and cilantro served with curry peanut sweet and sour sauce.',
+		price: 4.0
+	},
+	{
+		title: 'Grilled Chicken Salad',
+		info:
+			'​Crispy tofu, grilled chicken, hard boiled egg, lettuce, cucumber, grape tomato, red onion and cilantro served with curry peanut sweet and sour sauce.',
+		price: 7.0
+	},
+	{
+		title: 'Beef Salad   ',
+		info:
+			'Grilled beef sirloin, tomato, cucumber, red onion, bell pepper, mints and cilantro with spicy lime dressing.',
+		price: 12.95
+	},
+	{
+		title: 'Papaya Salad ',
+		info: 'Shredded green papaya, Thai chili, green bean, tomato and peanut with spicy lime dressing.',
+		price: 3.0
+	},
+	{
+		title: 'Grilled Shrimp Papaya Salad',
+		info:
+			'Shredded green papaya, grilled shrimp, Thai chili, green bean, tomato and peanut with spicy lime dressing.',
+		price: 8.0
+	},
+	{
+		title: 'Glass Noodle Salad',
+		info:
+			'Steam glass noodle, ground chicken, shrimp, squid, onion, red onion, mint, cilantro tossed with chili lime juice and sweet chili paste.',
+		price: 12.95
+	},
+	{
+		title: 'Larb',
+		info: 'Ground chicken roosted rice powder, red onion, mint, cilantro, tossed with chili lime juice.',
+		price: 11.95
+	}
+];

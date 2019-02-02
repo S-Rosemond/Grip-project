@@ -4,22 +4,12 @@ import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import Typography from '@material-ui/core/Typography';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
+import { AppBar, Toolbar, List, Typography, Divider, Hidden, IconButton, ListItem } from '@material-ui/core/';
 import MenuIcon from '@material-ui/icons/Menu';
-
-import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import CloseIcon from '@material-ui/icons/Close';
-import HomeIcon from '@material-ui/icons/Home';
-import MenuCartIcon from '@material-ui/icons/RestaurantMenu';
-import DessertIcon from '@material-ui/icons/LocalCafe';
-import DrinksIcon from '@material-ui/icons/LocalBar';
+import { Close, Home, RestaurantMenu, LocalCafe, LocalBar } from '@material-ui/icons/';
+import uuidv4 from 'uuid';
 
 const drawerWidth = 240;
 
@@ -53,15 +43,16 @@ const styles = theme => ({
 		flexShrink: 0
 	},
 	drawerPaper: {
-		fontFamily: 'ultra',
 		width: drawerWidth
 	},
 	drawerHeader: {
+		backgroundColor: '#da4444',
 		display: 'flex',
 		alignItems: 'center',
-		padding: '0 8px',
+		padding: '0 ',
 		...theme.mixins.toolbar,
-		justifyContent: 'flex-end'
+		justifyContent: 'flex-end',
+		height: '62px'
 	},
 	content: {
 		flexGrow: 1,
@@ -111,16 +102,18 @@ class PersistentDrawerLeft extends React.Component {
 					})}
 				>
 					<Toolbar disableGutters={!open}>
-						<IconButton
-							color="inherit"
-							aria-label="Open drawer"
-							onClick={this.handleDrawerOpen}
-							className={classNames(classes.menuButton, open && classes.hide)}
-						>
-							<MenuIcon />
-						</IconButton>
-						<Typography variant="h6" color="secondary" style={{ fontFamily: 'ultra' }}>
-							WILD TIGER THAI RESTAURANT AND BAR
+						<Hidden smUp>
+							<IconButton
+								color="inherit"
+								aria-label="Open drawer"
+								onClick={this.handleDrawerOpen}
+								className={classNames(classes.menuButton, open && classes.hide)}
+							>
+								<MenuIcon />
+							</IconButton>
+						</Hidden>
+						<Typography variant="h6" color="secondary" style={{ fontFamily: 'ultra', padding: '15px' }}>
+							WILD TIGER THAI
 						</Typography>
 					</Toolbar>
 				</AppBar>
@@ -135,24 +128,20 @@ class PersistentDrawerLeft extends React.Component {
 				>
 					<div className={classes.drawerHeader}>
 						<IconButton onClick={this.handleDrawerClose}>
-							{theme.direction === 'ltr' && <CloseIcon />}
+							{theme.direction === 'ltr' && <Close />}
 						</IconButton>
 					</div>
 					{['Home', 'Menu', 'Dessert', 'Beverages'].map((text, index) => {
-						const svgIcons = [
-							<HomeIcon key={index} />,
-							<MenuCartIcon key={index} />,
-							<DessertIcon key={index} />,
-							<DrinksIcon />
-						];
+						const svgIcons = [<Home />, <RestaurantMenu />, <LocalCafe />, <LocalBar />];
+						const ids = { id: uuidv4() };
 						return (
-							<Fragment>
+							<Fragment key={ids.id}>
 								<Divider />
 								<ListItemLink href={`/${text}`}>
-									<List>
-										<ListItem key={text}>
-											<ListItemIcon key={text[index]}>{svgIcons[index]}</ListItemIcon>
-											<ListItemText primary={text} key={`${text}${index}${text}`} />
+									<List key={ids.id}>
+										<ListItem key={ids.id}>
+											<ListItemIcon key={ids.id}>{svgIcons[index]}</ListItemIcon>
+											<ListItemText primary={text} />
 										</ListItem>
 									</List>
 								</ListItemLink>
@@ -162,35 +151,6 @@ class PersistentDrawerLeft extends React.Component {
 					<Divider />
 					<List />
 				</Drawer>
-				<main
-					className={classNames(classes.content, {
-						[classes.contentShift]: open
-					})}
-				>
-					<div className={classes.drawerHeader} />
-					<Typography paragraph>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-						labore et dolore magna aliqua. Rhoncus dolor purus non enim praesent elementum facilisis leo
-						vel. Risus at ultrices mi tempus imperdiet. Semper risus in hendrerit gravida rutrum quisque non
-						tellus. Convallis convallis tellus id interdum velit laoreet id donec ultrices. Odio morbi quis
-						commodo odio aenean sed adipiscing. Amet nisl suscipit adipiscing bibendum est ultricies integer
-						quis. Cursus euismod quis viverra nibh cras. Metus vulputate eu scelerisque felis imperdiet
-						proin fermentum leo. Mauris commodo quis imperdiet massa tincidunt. Cras tincidunt lobortis
-						feugiat vivamus at augue. At augue eget arcu dictum varius duis at consectetur lorem. Velit sed
-						ullamcorper morbi tincidunt. Lorem donec massa sapien faucibus et molestie ac.
-					</Typography>
-					<Typography paragraph>
-						Consequat mauris nunc congue nisi vitae suscipit. Fringilla est ullamcorper eget nulla facilisi
-						etiam dignissim diam. Pulvinar elementum integer enim neque volutpat ac tincidunt. Ornare
-						suspendisse sed nisi lacus sed viverra tellus. Purus sit amet volutpat consequat mauris.
-						Elementum eu facilisis sed odio morbi. Euismod lacinia at quis risus sed vulputate odio. Morbi
-						tincidunt ornare massa eget egestas purus viverra accumsan in. In hendrerit gravida rutrum
-						quisque non tellus orci ac. Pellentesque nec nam aliquam sem et tortor. Habitant morbi tristique
-						senectus et. Adipiscing elit duis tristique sollicitudin nibh sit. Ornare aenean euismod
-						elementum nisi quis eleifend. Commodo viverra maecenas accumsan lacus vel facilisis. Nulla
-						posuere sollicitudin aliquam ultrices sagittis orci a.
-					</Typography>
-				</main>
 			</div>
 		);
 	}
