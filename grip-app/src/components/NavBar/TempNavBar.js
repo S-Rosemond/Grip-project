@@ -101,14 +101,16 @@ class PersistentDrawerLeft extends React.Component {
 					})}
 				>
 					<Toolbar disableGutters={!open}>
-						<IconButton
-							color="inherit"
-							aria-label="Open drawer"
-							onClick={this.handleDrawerClose}
-							className={classNames(classes.menuButton, open && classes.hide)}
-						>
-							<Menu />
-						</IconButton>
+						<Hidden smUp>
+							<IconButton
+								color="inherit"
+								aria-label="Open drawer"
+								onClick={this.handleDrawerClose}
+								className={classNames(classes.menuButton, open && classes.hide)}
+							>
+								<Menu />
+							</IconButton>
+						</Hidden>
 						<Typography variant="h6" color="secondary" noWrap style={{ fontFamily: 'ultra' }}>
 							WILD TIGER THAI
 						</Typography>

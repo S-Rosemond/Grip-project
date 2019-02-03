@@ -17,14 +17,14 @@ const useStyles = makeStyles(() => ({
 		margin: '0 5px'
 	}
 }));
-const ids = { id: uuidv4() };
+
 const menuListArray = ['Home', 'Menu', 'Dessert', 'Beverages'];
 
 export const ButtonLinks = props => {
 	const classes = useStyles();
 
-	return menuListArray.map(text => (
-		<Button key={ids.id} className={classes.buttons} component={Link} to={text}>
+	return menuListArray.map((text, index) => (
+		<Button key={uuidv4()} className={classes.buttons} component={Link} to={index === 0 ? '/' : text}>
 			{text}
 		</Button>
 	));
@@ -36,9 +36,14 @@ export const SideBar = props => (
 			const svgIcons = [<Home />, <RestaurantMenu />, <LocalCafe />, <LocalBar />];
 
 			return (
-				<div key={ids.id}>
-					<MenuItem component={Link} to={text} key={ids.id} onKeyDown={props.handleDrawerToggle}>
-						<ListItemIcon key={ids.id}>{svgIcons[index]}</ListItemIcon>
+				<div key={uuidv4()}>
+					<MenuItem
+						component={Link}
+						to={index === 0 ? '/' : text}
+						key={uuidv4()}
+						onKeyDown={props.handleDrawerToggle}
+					>
+						<ListItemIcon key={uuidv4()}>{svgIcons[index]}</ListItemIcon>
 						<ListItemText primary={text} />
 					</MenuItem>
 					<Divider />

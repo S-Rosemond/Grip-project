@@ -11,7 +11,7 @@ class Pages extends Component {
 			<Fragment>
 				<TempNavBar />
 				<Switch>
-					<Route path="/Home" component={HomePage} />
+					<Route path="/" component={HomePage} exact />
 					<Route component={Default} />
 				</Switch>
 			</Fragment>
