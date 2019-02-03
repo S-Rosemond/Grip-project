@@ -1,21 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {
-	AppBar,
-	Button,
-	Divider,
-	Drawer,
-	Hidden,
-	IconButton,
-	Toolbar,
-	Typography,
-	withStyles
-} from '@material-ui/core/';
+import { AppBar, Divider, Drawer, Hidden, IconButton, Toolbar, Typography, withStyles } from '@material-ui/core/';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Menu, Close } from '@material-ui/icons/';
 
-import { SideBar } from './sideList';
+import { SideBar, ButtonLinks } from './sideList';
 
 const drawerWidth = 240;
 
@@ -126,18 +116,7 @@ class PersistentDrawerLeft extends React.Component {
 
 						<Hidden xsDown>
 							<Toolbar className={classes.buttonsToolBar}>
-								<Button className={classes.buttons} onClick={this.handleDrawerClose}>
-									Home
-								</Button>
-								<Button className={classes.buttons} onClick={this.handleDrawerClose}>
-									Menu
-								</Button>
-								<Button className={classes.buttons} onClick={this.handleDrawerClose}>
-									Dessert
-								</Button>
-								<Button className={classes.buttons} onClick={this.handleDrawerClose}>
-									Beverages
-								</Button>
+								<ButtonLinks />
 							</Toolbar>
 						</Hidden>
 					</Toolbar>
