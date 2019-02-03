@@ -3,12 +3,13 @@ import { Route, Switch } from 'react-router-dom';
 import NavBar from '../components/NavBar/NavBar';
 import HomePage from './../components/HomePage';
 import Default from './../components/Default';
+import TempNavBar from '../components/NavBar/TempNavBar';
 
 class Pages extends Component {
 	render() {
 		return (
 			<Fragment>
-				<NavBar />
+				<TempNavBar />
 				<Switch>
 					<Route path="/Home" component={HomePage} />
 					<Route component={Default} />
