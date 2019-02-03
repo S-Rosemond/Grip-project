@@ -1,6 +1,7 @@
 import React from 'react';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { BrowserRouter as Router } from 'react-router-dom';
+
 import Pages from './Pages';
 
 const theme = createMuiTheme({

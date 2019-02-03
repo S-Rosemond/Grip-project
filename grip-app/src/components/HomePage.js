@@ -1,10 +1,13 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, Component } from 'react';
 
-
-const HomePage = props => (
-	<Fragment>
-		<div>Home Page</div>
-	</Fragment>
-);
-
-export default HomePage;
+export default class HomePage extends Component {
+	render() {
+		return (
+			<Fragment>
+				<div>
+					<h1>Hello Home Page</h1>
+				</div>
+			</Fragment>
+		);
+	}
+}

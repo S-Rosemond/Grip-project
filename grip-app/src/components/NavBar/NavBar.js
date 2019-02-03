@@ -1,14 +1,28 @@
-import React, { Fragment } from 'react';
+import React, { Component, Fragment } from 'react';
+
+import { Link } from 'react-router-dom';
+
 import PropTypes from 'prop-types';
+
 import classNames from 'classnames';
-import { withStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
+
 import CssBaseline from '@material-ui/core/CssBaseline';
-import { AppBar, Toolbar, List, Typography, Divider, Hidden, IconButton, ListItem } from '@material-ui/core/';
-import MenuIcon from '@material-ui/icons/Menu';
-import ListItemText from '@material-ui/core/ListItemText';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import { Close, Home, RestaurantMenu, LocalCafe, LocalBar } from '@material-ui/icons/';
+
+import {
+	AppBar,
+	Divider,
+	Drawer,
+	Hidden,
+	IconButton,
+	ListItemIcon,
+	ListItemText,
+	MenuList,
+	MenuItem,
+	Toolbar,
+	Typography,
+	withStyles
+} from '@material-ui/core/';
+import { Close, Home, Menu, LocalCafe, LocalBar, RestaurantMenu } from '@material-ui/icons/';
 import uuidv4 from 'uuid';
 
 const drawerWidth = 240;
@@ -72,10 +86,10 @@ const styles = theme => ({
 	}
 });
 
-function ListItemLink(props) {
-	return <ListItem button component="a" {...props} />;
-}
-class PersistentDrawerLeft extends React.Component {
+// function ListItemLink(props) {
+// 	return <ListItem button component="a" {...props} />;
+// }
+class PersistentDrawerLeft extends Component {
 	state = {
 		open: false
 	};
@@ -109,7 +123,7 @@ class PersistentDrawerLeft extends React.Component {
 								onClick={this.handleDrawerOpen}
 								className={classNames(classes.menuButton, open && classes.hide)}
 							>
-								<MenuIcon />
+								<Menu />
 							</IconButton>
 						</Hidden>
 						<Typography variant="h6" color="secondary" style={{ fontFamily: 'ultra', padding: '15px' }}>
@@ -117,6 +131,7 @@ class PersistentDrawerLeft extends React.Component {
 						</Typography>
 					</Toolbar>
 				</AppBar>
+
 				<Drawer
 					className={classes.drawer}
 					variant="persistent"
@@ -131,26 +146,28 @@ class PersistentDrawerLeft extends React.Component {
 							{theme.direction === 'ltr' && <Close />}
 						</IconButton>
 					</div>
-					{['Home', 'Menu', 'Dessert', 'Beverages'].map((text, index) => {
-						const svgIcons = [<Home />, <RestaurantMenu />, <LocalCafe />, <LocalBar />];
-						const ids = { id: uuidv4() };
-						return (
-							<Fragment key={ids.id}>
-								<Divider />
-								<ListItemLink href={`/${text}`}>
-									<List key={ids.id}>
-										<ListItem key={ids.id}>
-											<ListItemIcon key={ids.id}>{svgIcons[index]}</ListItemIcon>
-											<ListItemText primary={text} />
-										</ListItem>
-									</List>
-								</ListItemLink>
-							</Fragment>
-						);
-					})}
 					<Divider />
-					<List />
+					<MenuList>
+						{['Home', 'Menu', 'Dessert', 'Beverages'].map((text, index) => {
+							const svgIcons = [<Home />, <RestaurantMenu />, <LocalCafe />, <LocalBar />];
+							const ids = { id: uuidv4() };
+							return (
+								<div key={ids.id}>
+									<MenuItem component={Link} to={text} key={ids.id}>
+										<ListItemIcon key={ids.id}>{svgIcons[index]}</ListItemIcon>
+										<ListItemText primary={text} />
+									</MenuItem>{' '}
+									<Divider />
+								</div>
+							);
+						})}
+					</MenuList>
 				</Drawer>
+				<main
+					className={classNames(classes.content, {
+						[classes.contentShift]: open
+					})}
+				/>
 			</div>
 		);
 	}
