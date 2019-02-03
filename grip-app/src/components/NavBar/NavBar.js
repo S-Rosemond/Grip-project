@@ -70,7 +70,7 @@ const styles = theme => ({
 	},
 	content: {
 		flexGrow: 1,
-		padding: theme.spacing.unit * 3,
+		padding: theme.spacing.unit * 4,
 		transition: theme.transitions.create('margin', {
 			easing: theme.transitions.easing.sharp,
 			duration: theme.transitions.duration.leavingScreen
@@ -134,7 +134,7 @@ class PersistentDrawerLeft extends Component {
 
 				<Drawer
 					className={classes.drawer}
-					variant="persistent"
+					variant="temporary"
 					anchor="left"
 					open={open}
 					classes={{
