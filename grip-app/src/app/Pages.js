@@ -9,6 +9,7 @@ class Pages extends Component {
 		return (
 			<Fragment>
 				<NavBar />
+
 				<Switch>
 					<Route path="/" component={HomePage} exact />
 					<Route component={NotFound} />
@@ -17,4 +18,5 @@ class Pages extends Component {
 		);
 	}
 }
+
 export default Pages;

@@ -7,6 +7,7 @@ import medium_1025 from './storeView/pexels-1025.jpeg';
 import Large_1440 from './storeView/pexels-1440.jpeg';
 import mediumL_1280 from './storeView/pexels-Thaifood-1280.jpeg';
 import xLarge_1920 from './storeView/pexels-Thaifood-1920.jpeg';
+// import tigerIcon from './storeView/'
 
 const SmallerScreens = () => (
 	<img
