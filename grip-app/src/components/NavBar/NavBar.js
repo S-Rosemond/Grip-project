@@ -1,25 +1,11 @@
-import React, { Component, Fragment } from 'react';
-
+import React from 'react';
 import PropTypes from 'prop-types';
-
 import classNames from 'classnames';
-
+import { AppBar, Divider, Drawer, Hidden, IconButton, Toolbar, Typography, withStyles } from '@material-ui/core/';
 import CssBaseline from '@material-ui/core/CssBaseline';
+import { Menu, Close } from '@material-ui/icons/';
 
-import {
-	AppBar,
-	Divider,
-	Drawer,
-	Hidden,
-	IconButton,
-	SwipeableDrawer,
-	Toolbar,
-	Typography,
-	withStyles
-} from '@material-ui/core/';
-import { Close, Menu } from '@material-ui/icons/';
-
-import { SideBar } from './sideList';
+import { SideBar, ButtonLinks } from './sideList';
 
 const drawerWidth = 240;
 
@@ -27,7 +13,9 @@ const styles = theme => ({
 	root: {
 		display: 'flex'
 	},
+	grow: { flexGrow: 1 },
 	appBar: {
+		display: 'flex',
 		transition: theme.transitions.create(['margin', 'width'], {
 			easing: theme.transitions.easing.sharp,
 			duration: theme.transitions.duration.leavingScreen
@@ -41,9 +29,18 @@ const styles = theme => ({
 			duration: theme.transitions.duration.enteringScreen
 		})
 	},
+	buttons: {
+		color: '#fff',
+		backgroundColor: '#ff8400',
+		margin: '0 5px'
+	},
+	buttonsToolBar: {
+		display: 'flex',
+		justifyContent: 'flex-end'
+	},
 	menuButton: {
 		marginLeft: 12,
-		marginRight: 20
+		marginRight: 15
 	},
 	hide: {
 		display: 'none'
@@ -59,14 +56,13 @@ const styles = theme => ({
 		backgroundColor: '#da4444',
 		display: 'flex',
 		alignItems: 'center',
-		padding: '0 ',
+		padding: '0 8px',
 		...theme.mixins.toolbar,
-		justifyContent: 'flex-end',
-		height: '62px'
+		justifyContent: 'flex-end'
 	},
 	content: {
 		flexGrow: 1,
-		padding: theme.spacing.unit * 4,
+		padding: theme.spacing.unit * 3.5,
 		transition: theme.transitions.create('margin', {
 			easing: theme.transitions.easing.sharp,
 			duration: theme.transitions.duration.leavingScreen
@@ -82,17 +78,13 @@ const styles = theme => ({
 	}
 });
 
-class PersistentDrawerLeft extends Component {
+class PersistentDrawerLeft extends React.Component {
 	state = {
 		open: false
 	};
 
-	handleDrawerOpen = () => {
-		this.setState({ open: true });
-	};
-
 	handleDrawerClose = () => {
-		this.setState({ open: false });
+		this.setState(state => ({ open: !state.open }));
 	};
 
 	render() {
@@ -113,19 +105,26 @@ class PersistentDrawerLeft extends Component {
 							<IconButton
 								color="inherit"
 								aria-label="Open drawer"
-								onClick={this.handleDrawerOpen}
+								onClick={this.handleDrawerClose}
 								className={classNames(classes.menuButton, open && classes.hide)}
 							>
 								<Menu />
 							</IconButton>
 						</Hidden>
-						<Typography variant="h6" color="secondary" style={{ fontFamily: 'ultra', padding: '15px' }}>
-							WILD TIGER THAI
+						<Typography variant="h6" color="secondary" noWrap style={{ fontFamily: 'ultra' }}>
+							WILD TIGER
 						</Typography>
+						<div className={classes.grow} />
+
+						<Hidden xsDown>
+							<Toolbar className={classes.buttonsToolBar}>
+								<ButtonLinks />
+							</Toolbar>
+						</Hidden>
 					</Toolbar>
 				</AppBar>
 
-				<SwipeableDrawer
+				<Drawer
 					className={classes.drawer}
 					variant="temporary"
 					anchor="left"
@@ -133,22 +132,23 @@ class PersistentDrawerLeft extends Component {
 					classes={{
 						paper: classes.drawerPaper
 					}}
-					onOpen={this.handleDrawerOpen}
 					onClose={this.handleDrawerClose}
 				>
 					<div className={classes.drawerHeader}>
-						<IconButton onKeyDown={this.handleDrawerClose} onClick={this.handleDrawerClose}>
+						<IconButton onClick={this.handleDrawerClose}>
 							{theme.direction === 'ltr' && <Close />}
 						</IconButton>
 					</div>
 					<Divider />
 					<SideBar />
-				</SwipeableDrawer>
+				</Drawer>
 				<main
 					className={classNames(classes.content, {
 						[classes.contentShift]: open
 					})}
-				/>
+				>
+					<div />
+				</main>
 			</div>
 		);
 	}
