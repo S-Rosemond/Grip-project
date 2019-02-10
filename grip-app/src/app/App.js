@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { BrowserRouter as Router } from 'react-router-dom';
 
@@ -21,7 +21,9 @@ const theme = createMuiTheme({
 const App = () => (
 	<MuiThemeProvider theme={theme}>
 		<Router>
-			<Pages />
+			<Suspense fallback={<div>Please Wait. Loading...</div>}>
+				<Pages />
+			</Suspense>
 		</Router>
 	</MuiThemeProvider>
 );

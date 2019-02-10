@@ -2,7 +2,7 @@ import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
 import { Paper, withStyles } from '@material-ui/core/';
 import Grid from '@material-ui/core/Grid';
-import { SmallerScreens, DesktopScreens } from '../assets/HomeImages';
+import { SmallerScreens, DesktopScreens } from '../../assets/HomeImages';
 
 const styles = theme => ({
 	root: {
@@ -35,8 +35,8 @@ class HomePage extends Component {
 	}
 }
 
-// HomePage.propTypes = {
-// 	classes: PropTypes.object.isRequired
-// };
+HomePage.propTypes = {
+	classes: PropTypes.object.isRequired
+};
 
 export default withStyles(styles)(HomePage);
