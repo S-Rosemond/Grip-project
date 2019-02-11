@@ -34,7 +34,7 @@ export const SideBar = props => (
 	<MenuList>
 		{menuListArray.map((text, index) => {
 			const svgIcons = [<Home />, <RestaurantMenu />, <LocalCafe />, <LocalBar />];
-			let { open, handleDrawerToggle } = props;
+			const { handleDrawerToggle } = props;
 
 			return (
 				<div key={uuidv4()}>

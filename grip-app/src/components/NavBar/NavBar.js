@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { AppBar, Divider, Drawer, Hidden, IconButton, Toolbar, Typography, withStyles } from '@material-ui/core/';
@@ -86,12 +86,7 @@ class PersistentDrawerLeft extends React.Component {
 	handleDrawerClose = () => {
 		this.setState(state => ({ open: !state.open }));
 	};
-	handleDrawerToggle(event) {
-		console.log(this);
-		event.stopPropagation();
-		if (this.state.open === true) this.setState({ open: false });
-	}
-
+	handleDrawerToggle = () => this.state.open && this.setState({ open: false });
 	render() {
 		const { classes, theme } = this.props;
 		const { open } = this.state;
@@ -150,7 +145,7 @@ class PersistentDrawerLeft extends React.Component {
 						</IconButton>
 					</div>
 					<Divider />
-					<SideBar open={open} handleDrawerToggle={this.handleDrawerToggle.bind(this)} />
+					<SideBar open={open} handleDrawerToggle={this.handleDrawerToggle} />
 				</Drawer>
 				<main
 					className={classNames(classes.content, {
