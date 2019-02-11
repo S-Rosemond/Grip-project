@@ -30,25 +30,33 @@ class HomePage extends Component {
 						</Typography>
 						<Typography color="textSecondary" align="center" style={{ fontWeight: 'bold' }}>
 							1825 SE 164th AVE Suite 101 VANCOUVER, WA 98683
-							{days.map(day => {
-								let time;
-								switch (day) {
-									case 'FRIDAY':
-										time = '11am - 10pm';
-										break;
-									case 'SATURDAY':
-										time = '12pm - 10pm';
-										break;
-									case 'SUNDAY':
-										time = '12pm - 9pm';
-										break;
-									default:
-										time = '11am - 9pm';
-								}
-
-								return ` ${day} ${time} `;
-							})}
 						</Typography>
+
+						{days.map(day => {
+							let time;
+							switch (day) {
+								case 'FRIDAY':
+									time = '11am - 10pm';
+									break;
+								case 'SATURDAY':
+									time = '12pm - 10pm';
+									break;
+								case 'SUNDAY':
+									time = '12pm - 9pm';
+									break;
+								default:
+									time = '11am - 9pm';
+							}
+
+							return (
+								<Typography
+									key={day}
+									color="textSecondary"
+									align="center"
+									style={{ fontWeight: 'bold' }}
+								>{` ${day} ${time} `}</Typography>
+							);
+						})}
 					</Grid>
 
 					{[0, 1].map((value, index) => (

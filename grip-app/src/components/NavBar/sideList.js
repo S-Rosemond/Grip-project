@@ -20,7 +20,7 @@ const useStyles = makeStyles(() => ({
 
 const menuListArray = ['Home', 'Menu', 'Dessert', 'Beverages'];
 
-export const ButtonLinks = props => {
+export const ButtonLinks = () => {
 	const classes = useStyles();
 
 	return menuListArray.map((text, index) => (
@@ -34,6 +34,7 @@ export const SideBar = props => (
 	<MenuList>
 		{menuListArray.map((text, index) => {
 			const svgIcons = [<Home />, <RestaurantMenu />, <LocalCafe />, <LocalBar />];
+			let { open, handleDrawerToggle } = props;
 
 			return (
 				<div key={uuidv4()}>
@@ -41,7 +42,9 @@ export const SideBar = props => (
 						component={Link}
 						to={index === 0 ? '/' : text}
 						key={uuidv4()}
-						onKeyDown={props.handleDrawerToggle}
+						onKeyDown={handleDrawerToggle}
+						onClick={handleDrawerToggle}
+						tabIndex={0}
 					>
 						<ListItemIcon key={uuidv4()}>{svgIcons[index]}</ListItemIcon>
 						<ListItemText primary={text} />

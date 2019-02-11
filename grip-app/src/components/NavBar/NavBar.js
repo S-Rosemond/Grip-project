@@ -86,6 +86,11 @@ class PersistentDrawerLeft extends React.Component {
 	handleDrawerClose = () => {
 		this.setState(state => ({ open: !state.open }));
 	};
+	handleDrawerToggle(event) {
+		console.log(this);
+		event.stopPropagation();
+		if (this.state.open === true) this.setState({ open: false });
+	}
 
 	render() {
 		const { classes, theme } = this.props;
@@ -111,7 +116,12 @@ class PersistentDrawerLeft extends React.Component {
 								<Menu />
 							</IconButton>
 						</Hidden>
-						<Typography variant="h6" color="secondary" noWrap style={{ fontFamily: 'ultra' }}>
+						<Typography
+							variant="h6"
+							color="secondary"
+							noWrap
+							style={{ fontFamily: 'ultra', fontSize: '1.4em', paddingLeft: '.2em' }}
+						>
 							WILD TIGER
 						</Typography>
 						<div className={classes.grow} />
@@ -140,7 +150,7 @@ class PersistentDrawerLeft extends React.Component {
 						</IconButton>
 					</div>
 					<Divider />
-					<SideBar />
+					<SideBar open={open} handleDrawerToggle={this.handleDrawerToggle.bind(this)} />
 				</Drawer>
 				<main
 					className={classNames(classes.content, {
