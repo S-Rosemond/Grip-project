@@ -9,7 +9,7 @@
 //     Shrimp: 12.00,
 //     Seafood: 14.00
 
-export const Appetizers = [
+export const appetizers = [
 	{
 		title: 'Wild Tiger Wings',
 		info: 'Marinated chicken wing, lightly breaded and fried until golden and crispy.',
