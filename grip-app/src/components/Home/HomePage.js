@@ -1,22 +1,24 @@
 import React, { Fragment, Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Paper, withStyles, Typography } from '@material-ui/core/';
-import { SmallerScreens, DesktopScreens } from '../../assets/HomeImages';
+import { Grid, withStyles, Typography } from '@material-ui/core/';
+import SmallerScreens from './Homepage-Assets/SmallerScreens';
+import DesktopScreens from './Homepage-Assets/DesktopScreens';
+import Title from './Home-Fragments/HomeTitle';
 
-const styles = theme => ({
+const styles = () => ({
 	root: {
 		flexGrow: 1
-	}
+	},
+	grow: { flexGrow: 1 }
 });
 
 class HomePage extends Component {
+	//Width as state for resize; my logic at first was users do not usually change width size so whatever image is cached they view: that = faster, better UX. But some users may resize if they have multiple screens, etc so let React deal with it!
 	state = {
-		spacing: '16'
+		widthCheck: window.innerWidth
 	};
-
 	render() {
 		const { classes } = this.props;
-		const widthCheck = window.innerWidth;
 
 		const days = ['MONDAY   ', 'TUESDAY  ', 'WEDNESDAY ', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
 
@@ -24,13 +26,13 @@ class HomePage extends Component {
 			<Fragment>
 				<Grid container className={classes.root} direction={'column'} spacing={16}>
 					<Grid item>
-						{widthCheck <= 776 ? <SmallerScreens /> : <DesktopScreens />}
-						<Typography variant="h6" color="secondary" style={{ fontFamily: 'ultra', textAlign: 'center' }}>
-							Wild Tiger Thai Cuisine & Bar
-						</Typography>
-						<Typography color="textSecondary" align="center" style={{ fontWeight: 'bold' }}>
-							1825 SE 164th AVE Suite 101 VANCOUVER, WA 98683
-						</Typography>
+						{this.widthCheck <= 776 ? <SmallerScreens /> : <DesktopScreens />}
+
+						<Title
+							title={'Wild Tiger Thai Cuisine & Bar'}
+							subtitle={'	1825 SE 164th AVE Suite 101 VANCOUVER, WA 98683'}
+							number={'360-882-8887'}
+						/>
 
 						{days.map(day => {
 							let time;
@@ -54,16 +56,13 @@ class HomePage extends Component {
 									color="textSecondary"
 									align="center"
 									style={{ fontWeight: 'bold' }}
-								>{` ${day} ${time} `}</Typography>
+								>
+									{day}
+									{time}
+								</Typography>
 							);
 						})}
 					</Grid>
-
-					{[0, 1].map((value, index) => (
-						<Grid key={value} item sm>
-							<Paper />
-						</Grid>
-					))}
 				</Grid>
 			</Fragment>
 		);

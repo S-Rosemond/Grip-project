@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { AppBar, Divider, Drawer, Hidden, IconButton, Toolbar, Typography, withStyles } from '@material-ui/core/';
