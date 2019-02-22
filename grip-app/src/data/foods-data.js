@@ -1,6 +1,8 @@
+// {
 // title: '',
 // info: '.',
 // price: 10.0
+// },
 
 // Tofu: 8.95,
 //     Vegetables: 8.95,
@@ -8,6 +10,8 @@
 //     Pork: 10.00,
 //     Shrimp: 12.00,
 //     Seafood: 14.00
+
+export const soup_choices = [8.95, 10, 12, 14];
 
 export const appetizers = [
 	{
@@ -74,6 +78,8 @@ export const appetizers = [
 	}
 ];
 
+export const soup_choice = [['Chicken', 'Tofu', 'Vegetables'], ['Beef', 'Pork'], 'Shrimp', 'Seafood'];
+
 export const soup = [
 	{
 		title: 'Tom Yum',
@@ -92,6 +98,25 @@ export const wontonSoup = [
 		title: 'Shrimp Wonton Soup ',
 		info: 'Shrimp wonton, shrimp, lettuce and bean sprout in clear broth soup.',
 		price: 8.0
+	}
+];
+
+export const noodle_soup = [
+	{
+		title: 'Tom Yum Noodle Soup',
+		info:
+			'Rice noodle or egg noodle with ground chicken, squid, shrimp, and bean sprout topped with chopped peanuts.',
+		price: 12.95
+	},
+	{
+		title: 'Khao Soi',
+		info: 'Egg noodle, shallot, cilantro in Chiang Mai curry soup topped with crispy egg noodle.',
+		price: 12.95
+	},
+	{
+		title: 'Clear Broth Noodle Soup',
+		info: 'Clear broth small rice noodle soup with bean sprout, cilantro and green onion.',
+		price: 12.95
 	}
 ];
 
@@ -135,5 +160,188 @@ export const salads = [
 		title: 'Larb',
 		info: 'Ground chicken roosted rice powder, red onion, mint, cilantro, tossed with chili lime juice.',
 		price: 11.95
+	}
+];
+
+export const stir_fried = [
+	{
+		title: 'Stir-Fried Cashew Nut',
+		info: 'Onion, celery, bell pepper, carrot, and cashew nut in roasted sweet chili sauce.',
+		price: ''
+	},
+	{
+		title: 'Stir-Fried Fresh Ginger',
+		info: 'Fresh ginger, mushroom, onion, carrot, and bell pepper.',
+		price: ''
+	},
+	{
+		title: 'Stir-Fried Garlic',
+		info: 'Sautéed roasted garlic, onion, mushroom, and cilantro in black pepper sauce over a bed of broccoli.',
+		price: ''
+	},
+	{
+		title: 'Stir-Fried Mixed Vegetables',
+		info: 'Stir-fried mixed vegetables in a wok with garlic soy sauce.',
+		price: ''
+	},
+	{
+		title: 'Pra Ram',
+		info: 'Steamed mixed vegetables topped with house peanut sauce.',
+		price: ''
+	},
+	{
+		title: 'Stir-Fried Eggplant ',
+		info: 'Onion, bell pepper, eggplant, and basil in roasted sweet chili sauce.',
+		price: ''
+	},
+	{
+		title: 'Stir-Fried Basil',
+		info: 'Stir-fried ground chicken with bell pepper, green bean, onion and basil.',
+		price: 11.95
+	}
+];
+
+export const curries = [
+	{
+		title: 'Red curry',
+		info: 'Red curry with coconut milk, bamboo shoot, bell pepper, and basil.',
+		price: ''
+	},
+	{
+		title: 'Green curry',
+		info: 'Green curry with coconut milk, bamboo shoot, bell pepper, eggplant and basil.',
+		price: ''
+	},
+	{
+		title: 'Yellow curry',
+		info: 'Yellow curry with coconut milk, potato, onion, carrot and sprinkled with shallots.',
+		price: ''
+	},
+	{
+		title: 'Panang curry',
+		info: 'A Panang curry with coconut milk, green bean, and bell peppers topped with ground peanut.',
+		price: ''
+	},
+	{
+		title: 'Mussaman curry',
+		info:
+			'A mild slow cooked curry made with a blend of spices including nutmeg, cumin and cloves in coconut milk with onion, carrot, potato, and peanuts.',
+		price: ''
+	},
+	{
+		title: 'Jungle curry',
+		info: 'Spicy clear red curry with Thai herbs, fresh vegetables, bamboo shoot, mushroom, bell pepper and basil.',
+		price: ''
+	}
+];
+
+export const fried_rice = [
+	{
+		title: 'Traditional Fried Rice',
+		info: 'Stir-fried rice with egg, onion, grape tomato, peas, and carrot.',
+		price: ''
+	},
+	{
+		title: 'Pineapple Fried Rice',
+		info:
+			'Stir-fried rice with curry powder, egg, pineapple, cashew nut, raisins, onion, grape tomato, pea and carrot.',
+		price: ''
+	},
+	{
+		title: 'Basil Fried Rice',
+		info: 'Stir-fried rice with egg, fresh chili, bell pepper, onion, and basil.',
+		price: ''
+	}
+];
+
+export const specials = [
+	{
+		title: 'Panang Curry Jumbo Prawn',
+		info: 'Grilled jumbo prawn topped with panang curry, bell pepper, green bean and asparagus.',
+		price: 17
+	},
+	{
+		title: 'Volcano Beef',
+		info:
+			'Stir-fried beef sirloin, tomato, onion, asparagus, bell pepper, pineapple, grape tomato in house specials sauce.',
+		price: 16
+	},
+	{
+		title: 'Teriyaki Chicken',
+		info: 'Charcoal boiled chicken with steam vegetable and rice.',
+		price: 13
+	},
+	{
+		title: 'Three flavors Salmon ',
+		info:
+			'Pan-fried sockeye salmon, topped with three-flavor dressing, green bean, onion and bell pepper topped with crisp basil.',
+		price: 15
+	},
+	{
+		title: 'Crispy Duck Curry',
+		info: 'Red curry with half roasted duck, pineapple, bell pepper, grape tomatoes, lychee and basil.',
+		price: 21
+	},
+
+	{
+		title: 'Dungeness Crab Fried Rice',
+		info: 'Crab meat, jasmine rice, egg, green onion and pea-carrot.',
+		price: 16
+	},
+	{
+		title: 'Lemongrass Chicken  ',
+		info: 'Grilled marinated lemongrass chicken with  steamed vegetable and topped with peanut sauce..',
+		price: 13
+	}
+];
+
+export const pumpkin_curry = [
+	{
+		title: 'Pumpkin Curry',
+		info: 'Golden pumpkin, lychee, bell pepper and basil in red curry sauce.',
+		price: ''
+	}
+];
+
+export const sides = [
+	{
+		title: 'Small steamed rice',
+		price: 1.5
+	},
+	{
+		title: 'Small Brown Rice',
+		price: 2
+	},
+	{
+		title: 'Sticky Rice',
+		price: 2
+	},
+	{
+		title: 'Steamed vegetables',
+		price: 3
+	},
+	{
+		title: 'Steamed Noodles',
+		price: 3
+	},
+	{
+		title: 'Steamed Meat',
+		price: 3
+	},
+	{
+		title: 'Squid or Shrimp',
+		price: 5
+	},
+	{
+		title: 'Peanut Sauce, small',
+		price: 2
+	},
+	{
+		title: 'Corkage Fee',
+		price: 15
+	},
+	{
+		title: 'Peanut Sauce, large',
+		price: 4
 	}
 ];
