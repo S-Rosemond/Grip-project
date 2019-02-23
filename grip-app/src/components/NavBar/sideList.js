@@ -2,56 +2,40 @@ import React from 'react';
 
 import { Link } from 'react-router-dom';
 
-import { Button, Divider, ListItemIcon, ListItemText, MenuList, MenuItem } from '@material-ui/core/';
-
-import { Home, LocalCafe, LocalBar, RestaurantMenu } from '@material-ui/icons/';
+import { Divider, ListItemIcon, ListItemText, MenuList, MenuItem } from '@material-ui/core/';
 
 import uuidv4 from 'uuid';
+import { ContextConsumer } from '../../context/Context';
 
-import { makeStyles } from '@material-ui/styles';
-
-const useStyles = makeStyles(() => ({
-	buttons: {
-		color: '#fff',
-		backgroundColor: '#ff8400',
-		margin: '0 5px'
+export default class SideBar extends React.Component {
+	render() {
+		return (
+			<ContextConsumer>
+				{value => {
+					return (
+						<MenuList>
+							{value.menuListArray.map((text, index) => {
+								return (
+									<div key={uuidv4()}>
+										<MenuItem
+											component={Link}
+											to={index === 0 ? '/' : text}
+											key={uuidv4()}
+											tabIndex={0}
+											onKeyDown={this.props.handleDrawerToggle}
+											onClick={this.props.handleDrawerToggle}
+										>
+											<ListItemIcon key={uuidv4()}>{value.svgIcons[index]}</ListItemIcon>
+											<ListItemText primary={text} />
+										</MenuItem>
+										<Divider />
+									</div>
+								);
+							})}
+						</MenuList>
+					);
+				}}
+			</ContextConsumer>
+		);
 	}
-}));
-
-const menuListArray = ['Home', 'Menu', 'Dessert', 'Beverages'];
-
-export const ButtonLinks = () => {
-	const classes = useStyles();
-
-	return menuListArray.map((text, index) => (
-		<Button key={uuidv4()} className={classes.buttons} component={Link} to={index === 0 ? '/' : text}>
-			{text}
-		</Button>
-	));
-};
-
-export const SideBar = props => (
-	<MenuList>
-		{menuListArray.map((text, index) => {
-			const svgIcons = [<Home />, <RestaurantMenu />, <LocalCafe />, <LocalBar />];
-			const { handleDrawerToggle } = props;
-
-			return (
-				<div key={uuidv4()}>
-					<MenuItem
-						component={Link}
-						to={index === 0 ? '/' : text}
-						key={uuidv4()}
-						onKeyDown={handleDrawerToggle}
-						onClick={handleDrawerToggle}
-						tabIndex={0}
-					>
-						<ListItemIcon key={uuidv4()}>{svgIcons[index]}</ListItemIcon>
-						<ListItemText primary={text} />
-					</MenuItem>
-					<Divider />
-				</div>
-			);
-		})}
-	</MenuList>
-);
+}

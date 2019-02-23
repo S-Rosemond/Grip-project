@@ -1,7 +1,9 @@
 import React from 'react';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Loader from './Loader';
+import { ContextScope } from '../context/Context';
+
+import Pages from './Pages';
 
 const theme = createMuiTheme({
 	palette: {
@@ -19,9 +21,11 @@ const theme = createMuiTheme({
 
 const App = () => (
 	<MuiThemeProvider theme={theme}>
-		<Router>
-			<Loader />
-		</Router>
+		<ContextScope>
+			<Router>
+				<Pages />
+			</Router>
+		</ContextScope>
 	</MuiThemeProvider>
 );
 

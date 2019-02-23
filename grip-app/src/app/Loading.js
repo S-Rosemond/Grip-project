@@ -12,7 +12,15 @@ const styles = theme => ({
 function CircularIndeterminate(props) {
 	const { classes } = props;
 	return (
-		<div>
+		<div
+			style={{
+				display: 'flex',
+				justifyContent: 'center',
+				alignItems: 'center',
+				padding: 150,
+				flexDirection: 'column'
+			}}
+		>
 			<CircularProgress className={classes.progress} color="secondary" />
 			<h1>Loading...</h1>
 		</div>

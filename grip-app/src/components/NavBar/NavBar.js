@@ -4,8 +4,8 @@ import classNames from 'classnames';
 import { AppBar, Divider, Drawer, Hidden, IconButton, Toolbar, Typography, withStyles } from '@material-ui/core/';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { Menu, Close } from '@material-ui/icons/';
-
-import { SideBar, ButtonLinks } from './sideList';
+import SideBar from './SideList';
+import ButtonLinks from './ButtonList';
 
 const drawerWidth = 240;
 
