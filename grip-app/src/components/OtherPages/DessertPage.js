@@ -6,7 +6,7 @@ export default function Dessert(props) {
 	return (
 		<ContextConsumer>
 			{value => {
-				return <NewPage location={props.location.pathname} />;
+				return <NewPage menu={value.desserts} location={props.location.pathname} />;
 			}}
 		</ContextConsumer>
 	);

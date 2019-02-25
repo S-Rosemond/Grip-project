@@ -19,7 +19,7 @@ export const drinks = [
 ];
 export const beer = [
 	{ title: 'Bud Light, Coor Light', price: 3.5 },
-	{ title: ' Singha, Tsingtao, Sapporo, Tiger, Heineken', price: 4.5 }
+	{ title: 'Singha, Tsingtao, Sapporo, Tiger, Heineken', price: 4.5 }
 ];
 export const house_whine = [{ title: ' All house wine: Chardonnay, Cabernet Sauvignon, Merot, Resling', price: 6 }];
 export const white_whine = [
