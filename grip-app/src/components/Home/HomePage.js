@@ -6,7 +6,6 @@ import DesktopScreens from './Homepage-Assets/DesktopScreens';
 import Title from './Home-Fragments/HomeTitle';
 import Time from './Home-Fragments/HomeTime';
 
-
 const styles = () => ({
 	root: {
 		flexGrow: 1
@@ -33,7 +32,6 @@ class HomePage extends Component {
 							number={'360-882-8887'}
 						/>
 						<Time />
-					
 					</Grid>
 				</Grid>
 			</Fragment>

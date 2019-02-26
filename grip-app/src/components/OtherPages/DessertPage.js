@@ -13,6 +13,7 @@ export default function Dessert(props) {
 						<div style={{ textAlign: 'center' }}>
 							<ImagesSupplier supplydrop={value.mango_dessert_image} />
 						</div>
+						<NewPage menu={value.sides} headline="Sides" location={props.location.pathname} />
 					</Fragment>
 				);
 			}}

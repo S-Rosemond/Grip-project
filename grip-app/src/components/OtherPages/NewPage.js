@@ -1,15 +1,11 @@
 import React, { Fragment } from 'react';
 import Grid from '@material-ui/core/Grid';
-import classnames from 'classnames';
 import Card from '@material-ui/core/Card';
 import CardHeader from '@material-ui/core/CardHeader';
 import CardContent from '@material-ui/core/CardContent';
-import CardActions from '@material-ui/core/CardActions';
-import Collapse from '@material-ui/core/Collapse';
 import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
 import Typography from '@material-ui/core/Typography';
-import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { withStyles } from '@material-ui/core/styles';
 import uuidv4 from 'uuid';
 import ImagesSupplier from './NewPageImageSupplier/ImagesSupplier';
@@ -91,30 +87,19 @@ class NewPage extends React.Component {
 									}
 									title={element.title}
 									action={
-										<IconButton className={classes.subaction}>{`$ ${element.price}`}</IconButton>
+										element.price && (
+											<IconButton
+												className={classes.subaction}
+											>{`$ ${element.price}`}</IconButton>
+										)
 									}
 								/>
 
 								{element.info && (
 									<Fragment>
-										<CardActions className={classes.actions} disableActionSpacing>
-											<Typography paragraph>Ingredients:</Typography>
-											<IconButton
-												className={classnames(classes.expand, {
-													[classes.expandOpen]: this.state.expanded
-												})}
-												onClick={this.handleExpandClick}
-												aria-expanded={this.state.expanded}
-												aria-label="Show more"
-											>
-												<ExpandMoreIcon />
-											</IconButton>
-										</CardActions>
-										<Collapse in={this.state.expanded} timeout="auto" unmountOnExit>
-											<CardContent>
-												<Typography paragraph>{element.info}</Typography>
-											</CardContent>
-										</Collapse>
+										<CardContent>
+											<Typography paragraph>{element.info}</Typography>
+										</CardContent>
 									</Fragment>
 								)}
 							</Card>

@@ -11,7 +11,9 @@
 //     Shrimp: 12.00,
 //     Seafood: 14.00
 
-export const soup_choices = [8.95, 10, 12, 14];
+// export const soup_choices = [8.95, 10, 12, 14];
+// export const soup_choice = [['Chicken', 'Tofu', 'Vegetables'], ['Beef', 'Pork'], 'Shrimp', 'Seafood'];
+//Deadline soon therefore I will not implement price list. I had two different way that I thought I could use: switch statement with titles: shrimp etc or mapping with template literal. Instead will add to info.
 
 export const appetizers = [
 	{
@@ -78,8 +80,7 @@ export const appetizers = [
 	}
 ];
 
-export const soup_choice = [['Chicken', 'Tofu', 'Vegetables'], ['Beef', 'Pork'], 'Shrimp', 'Seafood'];
-
+// Choice of Chicken, Tofu or Vegetables: $8.95, Beef or Pork: $10, Shrimp: $12, Seafood: $14
 export const soup = [
 	{
 		title: 'Tom Yum',
@@ -162,7 +163,7 @@ export const salads = [
 		price: 11.95
 	}
 ];
-
+// Served with steamed rice. Substitute brown rice add $1. Choice of Chicken, Tofu, Vegetable $11, Beef or Pork $12,Shrimp $14, Seafood $16
 export const stir_fried = [
 	{
 		title: 'Stir-Fried Cashew Nut',
@@ -176,22 +177,22 @@ export const stir_fried = [
 	},
 	{
 		title: 'Stir-Fried Garlic',
-		info: 'Sautéed roasted garlic, onion, mushroom, and cilantro in black pepper sauce over a bed of broccoli.',
+		info: 'Sautéed roasted garlic, onion, mushroom, and cilantro in black pepper sauce over a bed of broccoli. ',
 		price: ''
 	},
 	{
 		title: 'Stir-Fried Mixed Vegetables',
-		info: 'Stir-fried mixed vegetables in a wok with garlic soy sauce.',
+		info: 'Stir-fried mixed vegetables in a wok with garlic soy sauce. ',
 		price: ''
 	},
 	{
 		title: 'Pra Ram',
-		info: 'Steamed mixed vegetables topped with house peanut sauce.',
+		info: 'Steamed mixed vegetables topped with house peanut sauce. Served with steamed rice.',
 		price: ''
 	},
 	{
 		title: 'Stir-Fried Eggplant ',
-		info: 'Onion, bell pepper, eggplant, and basil in roasted sweet chili sauce.',
+		info: 'Onion, bell pepper, eggplant, and basil in roasted sweet chili sauce. ',
 		price: ''
 	},
 	{
@@ -299,6 +300,24 @@ export const pumpkin_curry = [
 	{
 		title: 'Pumpkin Curry',
 		info: 'Golden pumpkin, lychee, bell pepper and basil in red curry sauce.',
+		price: ''
+	}
+];
+export const noodles = [
+	{
+		title: 'Pad Thai',
+		info:
+			'Stir-fried wide-size rice in tamarind sauce with egg, bean sprout, and green onion served with chopped peanuts.',
+		price: ''
+	},
+	{
+		title: 'Pad See-Iew',
+		info: 'Stir-fried wide-size rice noodle with egg, carrot, broccoli and sweet soy sauce.',
+		price: ''
+	},
+	{
+		title: 'Pad Woon-Sen',
+		info: 'Stir-fried wide-size rice noodle with egg, cabbage, onion and bean sprout in house soy sauce.',
 		price: ''
 	}
 ];

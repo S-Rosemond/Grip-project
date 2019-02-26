@@ -4,12 +4,11 @@ import {
 	appetizers,
 	curries,
 	fried_rice,
+	noodles,
 	noodle_soup,
 	pumpkin_curry,
 	sides,
 	soup,
-	soup_choice,
-	soup_choices,
 	specials,
 	stir_fried,
 	wontonSoup,
@@ -22,11 +21,17 @@ import {
 	sapporo_beer_image,
 	whine_image,
 	mango_dessert_image,
-	lava_cake_image,
 	crab_puff_image,
-	duck_curry_image,
-	pad_thai_image,
-	drunken_noodle_image
+	duck_curry,
+	drunken_noodle,
+	larb,
+	panang,
+	khao_soi,
+	pad_thai,
+	chicken_cashew,
+	pumpkin_curr,
+	tom_yum,
+	pumpkin_shrimp
 } from '../data/image-data';
 
 const ContextProvider = React.createContext();
@@ -42,8 +47,6 @@ class ContextScope extends Component {
 		pumpkin_curry,
 		sides,
 		soup,
-		soup_choice,
-		soup_choices,
 		specials,
 		stir_fried,
 		wontonSoup,
@@ -58,11 +61,19 @@ class ContextScope extends Component {
 		sapporo_beer_image,
 		whine_image,
 		mango_dessert_image,
-		lava_cake_image,
-		crab_puff_image,
-		duck_curry_image,
-		pad_thai_image,
-		drunken_noodle_image
+
+		duck_curry,
+		drunken_noodle,
+		larb,
+		panang,
+		khao_soi,
+		noodles,
+		pad_thai,
+		chicken_cashew,
+		pumpkin_curr,
+		pumpkin_shrimp,
+		tom_yum,
+		crab_puff_image
 	};
 
 	render() {
