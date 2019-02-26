@@ -13,6 +13,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { withStyles } from '@material-ui/core/styles';
 import uuidv4 from 'uuid';
 
+import ImagesSupplier from './NewPageImageSupplier/ImagesSupplier';
+
 const styles = theme => {
 	// console.log(theme);
 	return {
@@ -37,14 +39,19 @@ const styles = theme => {
 		avatar: {
 			backgroundColor: '#da4444'
 		},
-		subheader: {
-			color: 'green'
+		subaction: {
+			fontSize: '1.2em',
+			fontWeight: 100,
+			cursor: 'default'
 		}
 	};
 };
-
+// Window.innerWidth here again to avoid issues
 class NewPage extends React.Component {
-	state = { expanded: false };
+	state = {
+		expanded: false,
+		winWidth: window.innerWidth
+	};
 
 	handleExpandClick = () => {
 		this.setState(state => ({ expanded: !state.expanded }));
@@ -59,7 +66,13 @@ class NewPage extends React.Component {
 		return (
 			<Fragment>
 				<div style={{ textAlign: 'center' }}>
-					<h1>{this.props.headline || banner[1]}</h1>
+					<h1>
+						{(this.props.display && (
+							<ImagesSupplier supplydrop={this.props.display} screensize={this.state.winWidth} />
+						)) ||
+							this.props.headline ||
+							banner[1]}
+					</h1>
 					<hr />
 				</div>
 				<Grid container>
@@ -80,12 +93,13 @@ class NewPage extends React.Component {
 										</Avatar>
 									}
 									title={element.title}
-									subheader={`$ ${element.price}`}
+									action={
+										<IconButton className={classes.subaction}>{`$ ${element.price}`}</IconButton>
+									}
 								/>
 
 								{element.info && (
 									<Fragment>
-										{' '}
 										<CardActions className={classes.actions} disableActionSpacing>
 											<Typography paragraph>Ingredients:</Typography>
 											<IconButton
