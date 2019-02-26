@@ -10,7 +10,11 @@ export default function Beverages(props) {
 					<Fragment>
 						<NewPage menu={value.drinks} location={props.location.pathname} />
 
-						<NewPage menu={value.beer} location={props.location.pathname} headline={'Beer'} />
+						<NewPage
+							menu={value.beer}
+							location={props.location.pathname}
+							display={value.sapporo_beer_image}
+						/>
 
 						<NewPage
 							menu={value.house_whine}
@@ -18,6 +22,7 @@ export default function Beverages(props) {
 							display={value.whine_image}
 						/>
 						<NewPage menu={value.white_whine} location={props.location.pathname} headline={'White Whine'} />
+						<NewPage menu={value.red_whine} location={props.location.pathname} headline={'Red Whine'} />
 					</Fragment>
 				);
 			}}

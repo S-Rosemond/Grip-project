@@ -18,7 +18,16 @@ import {
 
 import { happy_appetizers } from './../data/happy-hour';
 import { beer, desserts, drinks, house_whine, white_whine, red_whine } from './../data/beverage-data';
-import { appetizer_images, appetizer_sub_images, dessert_images, whine_image, beer_image } from '../data/image-data';
+import {
+	sapporo_beer_image,
+	whine_image,
+	mango_dessert_image,
+	lava_cake_image,
+	crab_puff_image,
+	duck_curry_image,
+	pad_thai_image,
+	drunken_noodle_image
+} from '../data/image-data';
 
 const ContextProvider = React.createContext();
 
@@ -46,11 +55,14 @@ class ContextScope extends Component {
 		white_whine,
 		red_whine,
 		happy_appetizers,
-		appetizer_images,
-		appetizer_sub_images,
-		dessert_images,
+		sapporo_beer_image,
 		whine_image,
-		beer_image
+		mango_dessert_image,
+		lava_cake_image,
+		crab_puff_image,
+		duck_curry_image,
+		pad_thai_image,
+		drunken_noodle_image
 	};
 
 	render() {

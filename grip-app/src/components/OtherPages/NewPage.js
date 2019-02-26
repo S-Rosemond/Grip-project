@@ -12,11 +12,9 @@ import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import { withStyles } from '@material-ui/core/styles';
 import uuidv4 from 'uuid';
-
 import ImagesSupplier from './NewPageImageSupplier/ImagesSupplier';
 
 const styles = theme => {
-	// console.log(theme);
 	return {
 		card: {
 			maxWidth: 400
@@ -46,11 +44,12 @@ const styles = theme => {
 		}
 	};
 };
-// Window.innerWidth here again to avoid issues
+
 class NewPage extends React.Component {
 	state = {
 		expanded: false,
-		winWidth: window.innerWidth
+		winWidth: window.innerWidth,
+		resize: ''
 	};
 
 	handleExpandClick = () => {
@@ -62,14 +61,12 @@ class NewPage extends React.Component {
 		const regex = /^\/(\w+)/gi;
 		let banner = regex.exec(route);
 		const { classes } = this.props;
-		console.log(this.props);
+
 		return (
 			<Fragment>
 				<div style={{ textAlign: 'center' }}>
 					<h1>
-						{(this.props.display && (
-							<ImagesSupplier supplydrop={this.props.display} screensize={this.state.winWidth} />
-						)) ||
+						{(this.props.display && <ImagesSupplier supplydrop={this.props.display} />) ||
 							this.props.headline ||
 							banner[1]}
 					</h1>
@@ -130,9 +127,3 @@ class NewPage extends React.Component {
 }
 
 export default withStyles(styles)(NewPage);
-
-// element.img ?   <CardMedia
-// className={classes.media}
-// image="/static/images/cards/paella.jpg"
-// title="Paella dish"
-// /> : null
