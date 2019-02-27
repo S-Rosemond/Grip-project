@@ -1,8 +1,3 @@
-// {
-// title: '',
-// info: '.',
-// price: 10.0
-// },
 
 // Tofu: 8.95,
 //     Vegetables: 8.95,
@@ -10,10 +5,9 @@
 //     Pork: 10.00,
 //     Shrimp: 12.00,
 //     Seafood: 14.00
-
 // export const soup_choices = [8.95, 10, 12, 14];
 // export const soup_choice = [['Chicken', 'Tofu', 'Vegetables'], ['Beef', 'Pork'], 'Shrimp', 'Seafood'];
-//Deadline soon therefore I will not implement price list. I had two different way that I thought I could use: switch statement with titles: shrimp etc or mapping with template literal. Instead will add to info.
+
 
 export const appetizers = [
 	{

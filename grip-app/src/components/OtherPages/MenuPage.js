@@ -2,7 +2,7 @@ import React from 'react';
 import { ContextConsumer } from '../../context/Context';
 import NewPage from './NewPage';
 
-// Tabs not elemented due to time, not the time constraint of the project, life got in the way.
+
 export default function Menu(props) {
 	return (
 		<ContextConsumer>
