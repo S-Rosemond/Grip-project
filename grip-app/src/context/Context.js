@@ -21,7 +21,6 @@ import {
 	sapporo_beer_image,
 	whine_image,
 	mango_dessert_image,
-	crab_puff_image,
 	duck_curry,
 	drunken_noodle,
 	larb,
@@ -72,8 +71,7 @@ class ContextScope extends Component {
 		chicken_cashew,
 		pumpkin_curr,
 		pumpkin_shrimp,
-		tom_yum,
-		crab_puff_image
+		tom_yum
 	};
 
 	render() {

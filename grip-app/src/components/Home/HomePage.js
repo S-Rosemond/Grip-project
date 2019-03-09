@@ -30,8 +30,38 @@ class HomePage extends Component {
 							title={'Wild Tiger Thai Cuisine & Bar'}
 							subtitle={'	1825 SE 164th AVE Suite 101 VANCOUVER, WA 98683'}
 							number={'360-882-8887'}
+							textStroke="#202020"
+							shadowFont=" 3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000"
+						/>
+						<Title
+							number="Hours"
+							textColor="#da4444"
+							textStroke="#202020"
+							shadowFont=" 3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000"
 						/>
 						<Time />
+						<Title
+							number="Happy Hours"
+							subtitle="3:00pm - 6:00pm "
+							textStroke="#202020"
+							shadowFont=" 3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000"
+						/>
+						<Title
+							subtitle="HAPPY HOUR FOOD REQUIRES A MINIMUM OF ONE DRINK PER PERSON"
+							typographyColor="error"
+						/>
 					</Grid>
 				</Grid>
 			</Fragment>

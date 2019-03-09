@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '@material-ui/core/';
 
-export default function HomeTime() {
+export default function HomeTime(props) {
 	const days = ['MONDAY   ', 'TUESDAY  ', 'WEDNESDAY ', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
 
 	return (
@@ -26,7 +26,8 @@ export default function HomeTime() {
 					<Typography
 						key={`${day}${day}${time}`}
 						gutterBottom={true}
-						color="textSecondary"
+						variant="subtitle2"
+						color="textPrimary"
 						style={{
 							listStyle: 'none',
 							fontWeight: 'bold',
@@ -36,6 +37,7 @@ export default function HomeTime() {
 							marginTop: 4.9
 						}}
 					>
+						{console.log(props.reFont)}
 						<li key={day}>{day}</li>
 						<li key={`${day}  ${time}`}>{time}</li>
 					</Typography>
