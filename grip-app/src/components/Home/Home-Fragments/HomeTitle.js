@@ -24,7 +24,8 @@ const Title = ({
 				display: 'flex',
 				flexDirection: 'column',
 				fontSize: 25,
-				marginBottom: 5
+				marginBottom: 5,
+				marginTop: 15
 			}}
 		>
 			<span

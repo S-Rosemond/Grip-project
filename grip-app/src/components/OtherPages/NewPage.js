@@ -67,6 +67,8 @@ class NewPage extends React.Component {
 							banner[1]}
 					</h1>
 					<hr />
+
+					<h5>{this.props.pricing}</h5>
 				</div>
 				<Grid container>
 					{this.props.menu.map(element => (

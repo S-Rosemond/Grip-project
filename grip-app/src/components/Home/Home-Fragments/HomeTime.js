@@ -37,7 +37,6 @@ export default function HomeTime(props) {
 							marginTop: 4.9
 						}}
 					>
-						{console.log(props.reFont)}
 						<li key={day}>{day}</li>
 						<li key={`${day}  ${time}`}>{time}</li>
 					</Typography>

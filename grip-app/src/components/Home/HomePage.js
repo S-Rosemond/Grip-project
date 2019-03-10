@@ -5,6 +5,7 @@ import SmallerScreens from './Homepage-Assets/SmallerScreens';
 import DesktopScreens from './Homepage-Assets/DesktopScreens';
 import Title from './Home-Fragments/HomeTitle';
 import Time from './Home-Fragments/HomeTime';
+import Button from '@material-ui/core/Button';
 
 const styles = () => ({
 	root: {
@@ -30,37 +31,22 @@ class HomePage extends Component {
 							title={'Wild Tiger Thai Cuisine & Bar'}
 							subtitle={'	1825 SE 164th AVE Suite 101 VANCOUVER, WA 98683'}
 							number={'360-882-8887'}
-							textStroke="#202020"
-							shadowFont=" 3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000"
 						/>
-						<Title
-							number="Hours"
-							textColor="#da4444"
-							textStroke="#202020"
-							shadowFont=" 3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000"
-						/>
+
+						<Title number="Hours" textColor="#da4444" />
 						<Time />
+
+						<Title subtitle="We are bringing new Thai flavor dishes to the South East of Vancouver, WA. " />
 						<Title
-							number="Happy Hours"
-							subtitle="3:00pm - 6:00pm "
-							textStroke="#202020"
-							shadowFont=" 3px 3px 0 #000,
-     -1px -1px 0 #000,  
-      1px -1px 0 #000,
-      -1px 1px 0 #000,
-       1px 1px 0 #000"
-						/>
-						<Title
-							subtitle="HAPPY HOUR FOOD REQUIRES A MINIMUM OF ONE DRINK PER PERSON"
-							typographyColor="error"
+							title={
+								<Button
+									variant="contained"
+									color="secondary"
+									href="https://www.facebook.com/wildtigerthairestaurantofficialpage/"
+								>
+									Face Book
+								</Button>
+							}
 						/>
 					</Grid>
 				</Grid>

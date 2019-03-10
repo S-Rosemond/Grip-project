@@ -6,6 +6,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import { Menu, Close } from '@material-ui/icons/';
 import SideBar from './SideList';
 import ButtonLinks from './ButtonList';
+import { Link } from 'react-router-dom';
 
 const drawerWidth = 240;
 
@@ -114,8 +115,15 @@ class PersistentDrawerLeft extends React.Component {
 						<Typography
 							variant="h6"
 							color="secondary"
+							component={Link}
+							to="/"
 							noWrap
-							style={{ fontFamily: 'ultra', fontSize: '1.4em', paddingLeft: '.2em' }}
+							style={{
+								fontFamily: 'ultra',
+								fontSize: '1.4em',
+								paddingLeft: '.2em',
+								textDecoration: 'none'
+							}}
 						>
 							WILD TIGER
 						</Typography>

@@ -1,14 +1,3 @@
-
-// Tofu: 8.95,
-//     Vegetables: 8.95,
-//     Beef: 10.00,
-//     Pork: 10.00,
-//     Shrimp: 12.00,
-//     Seafood: 14.00
-// export const soup_choices = [8.95, 10, 12, 14];
-// export const soup_choice = [['Chicken', 'Tofu', 'Vegetables'], ['Beef', 'Pork'], 'Shrimp', 'Seafood'];
-
-
 export const appetizers = [
 	{
 		title: 'Wild Tiger Wings',
