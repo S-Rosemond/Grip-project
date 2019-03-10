@@ -3,7 +3,6 @@ import { ContextConsumer } from '../../context/Context';
 import NewPage from './NewPage';
 import ImagesSupplier from './NewPageImageSupplier/ImagesSupplier';
 
-//Last day: won't break div:Imagesupplier into wrapper component; not Dry.
 export default function Dessert(props) {
 	return (
 		<ContextConsumer>

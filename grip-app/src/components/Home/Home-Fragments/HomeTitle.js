@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 
 import { Typography } from '@material-ui/core/';
-// Not hard coded so components can be reused in other projects
+
 const Title = ({
 	title,
 	subtitle,
