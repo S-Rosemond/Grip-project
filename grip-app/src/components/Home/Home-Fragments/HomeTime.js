@@ -37,8 +37,12 @@ export default function HomeTime(props) {
 							marginTop: 4.9
 						}}
 					>
-						<li key={day}>{day}</li>
-						<li key={`${day}  ${time}`}>{time}</li>
+						<li style={{ fontSize: 12 }} key={day}>
+							{day}
+						</li>
+						<li style={{ fontSize: 12 }} key={`${day}  ${time}`}>
+							{time}
+						</li>
 					</Typography>
 				);
 			})}

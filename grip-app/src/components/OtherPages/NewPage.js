@@ -44,12 +44,7 @@ const styles = theme => {
 class NewPage extends React.Component {
 	state = {
 		expanded: false,
-		winWidth: window.innerWidth,
-		resize: ''
-	};
-
-	handleExpandClick = () => {
-		this.setState(state => ({ expanded: !state.expanded }));
+		winWidth: window.innerWidth
 	};
 
 	render() {

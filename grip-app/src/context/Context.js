@@ -46,7 +46,7 @@ class ContextScope extends Component {
 			<RestaurantMenu style={{ color: '#ff8400' }} />,
 			<LocalCafe style={{ color: '#7B3F00' }} />,
 			<LocalBar style={{ color: '#da4444' }} />,
-			<SentimentVerySatisfied style={{ color: '#00aa00' }} />
+			<SentimentVerySatisfied style={{ color: '#ff8400' }} />
 		],
 		appetizers,
 		curries,

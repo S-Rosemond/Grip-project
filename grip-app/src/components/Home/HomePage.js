@@ -6,6 +6,8 @@ import DesktopScreens from './Homepage-Assets/DesktopScreens';
 import Title from './Home-Fragments/HomeTitle';
 import Time from './Home-Fragments/HomeTime';
 import Button from '@material-ui/core/Button';
+// import HomeGMap from './Home-Fragments/HomeGMap';
+const HomeGMap = React.lazy(() => import('./Home-Fragments/HomeGMap'));
 
 const styles = () => ({
 	root: {
@@ -44,10 +46,19 @@ class HomePage extends Component {
 									color="secondary"
 									href="https://www.facebook.com/wildtigerthairestaurantofficialpage/"
 								>
-									Face Book
+									FaceBook
 								</Button>
 							}
 						/>
+						<React.Suspense
+							fallback={
+								<div>
+									<h1>Loading...</h1>
+								</div>
+							}
+						>
+							<HomeGMap widthCheck={this.widthCheck} />
+						</React.Suspense>
 					</Grid>
 				</Grid>
 			</Fragment>
