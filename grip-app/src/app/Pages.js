@@ -6,6 +6,7 @@ import NotFound from './../components/NotFound';
 import DessertPage from '../components/OtherPages/DessertPage';
 import BeveragesPage from '../components/OtherPages/BeveragesPage';
 import MenuPage from '../components/OtherPages/MenuPage';
+import HappyHours from '../components/OtherPages/HappyHours';
 
 class Pages extends Component {
 	render() {
@@ -18,6 +19,7 @@ class Pages extends Component {
 					<Route path="/Dessert" component={DessertPage} />
 					<Route path="/Beverages" component={BeveragesPage} />
 					<Route path="/Menu" component={MenuPage} />
+					<Route path="/Happy Hours" component={HappyHours} />
 					<Route component={NotFound} />
 				</Switch>
 			</Fragment>

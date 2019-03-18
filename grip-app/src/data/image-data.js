@@ -79,3 +79,24 @@ export const tom_yum = [
 		title: 'Tom Yum'
 	}
 ];
+
+export const egg_rolls = [
+	{
+		image: '/img/egg-roll.jpg',
+		title: 'Egg Rolls'
+	}
+];
+
+export const drunk_orig = [
+	{
+		image: '/img/drunks_orig.jpg',
+		title: 'Five alcoholic beverages aligned side by side on a black granite bar top in front of a red curtain.'
+	}
+];
+
+export const dessert_galore = [
+	{
+		image: '/img/dessert_galore.jpg',
+		title: 'An array of desserts from ice cream to cake and ice combo.'
+	}
+];

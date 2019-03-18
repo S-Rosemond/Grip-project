@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Home, LocalCafe, LocalBar, RestaurantMenu } from '@material-ui/icons/';
+import { Home, LocalCafe, LocalBar, RestaurantMenu, SentimentVerySatisfied } from '@material-ui/icons/';
 import {
 	appetizers,
 	curries,
@@ -15,13 +15,12 @@ import {
 	salads
 } from '../data/foods-data';
 
-import { happy_appetizers } from './../data/happy-hour';
+import { happy_appetizers, happy_drinks } from './../data/happy-hour';
 import { beer, desserts, drinks, house_whine, white_whine, red_whine } from './../data/beverage-data';
 import {
 	sapporo_beer_image,
 	whine_image,
 	mango_dessert_image,
-	crab_puff_image,
 	duck_curry,
 	drunken_noodle,
 	larb,
@@ -31,15 +30,24 @@ import {
 	chicken_cashew,
 	pumpkin_curr,
 	tom_yum,
-	pumpkin_shrimp
+	pumpkin_shrimp,
+	egg_rolls,
+	drunk_orig,
+	dessert_galore
 } from '../data/image-data';
 
 const ContextProvider = React.createContext();
 
 class ContextScope extends Component {
 	state = {
-		menuListArray: ['Home', 'Menu', 'Dessert', 'Beverages'],
-		svgIcons: [<Home />, <RestaurantMenu />, <LocalCafe />, <LocalBar />],
+		menuListArray: ['Home', 'Menu', 'Dessert', 'Beverages', 'Happy Hours'],
+		svgIcons: [
+			<Home style={{ color: '#ed3d02' }} />,
+			<RestaurantMenu style={{ color: '#ff8400' }} />,
+			<LocalCafe style={{ color: '#7B3F00' }} />,
+			<LocalBar style={{ color: '#da4444' }} />,
+			<SentimentVerySatisfied style={{ color: '#ff8400' }} />
+		],
 		appetizers,
 		curries,
 		fried_rice,
@@ -58,6 +66,7 @@ class ContextScope extends Component {
 		white_whine,
 		red_whine,
 		happy_appetizers,
+		happy_drinks,
 		sapporo_beer_image,
 		whine_image,
 		mango_dessert_image,
@@ -73,7 +82,9 @@ class ContextScope extends Component {
 		pumpkin_curr,
 		pumpkin_shrimp,
 		tom_yum,
-		crab_puff_image
+		egg_rolls,
+		drunk_orig,
+		dessert_galore
 	};
 
 	render() {

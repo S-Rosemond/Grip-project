@@ -11,9 +11,12 @@ export default function Dessert(props) {
 					<Fragment>
 						<NewPage menu={value.desserts} location={props.location.pathname} />
 						<div style={{ textAlign: 'center' }}>
-							<ImagesSupplier supplydrop={value.mango_dessert_image} />
+							<ImagesSupplier supplydrop={value.dessert_galore} />
 						</div>
 						<NewPage menu={value.sides} headline="Sides" location={props.location.pathname} />
+						<div style={{ textAlign: 'center' }}>
+							<ImagesSupplier supplydrop={value.mango_dessert_image} />
+						</div>
 					</Fragment>
 				);
 			}}

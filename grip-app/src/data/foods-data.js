@@ -1,14 +1,3 @@
-
-// Tofu: 8.95,
-//     Vegetables: 8.95,
-//     Beef: 10.00,
-//     Pork: 10.00,
-//     Shrimp: 12.00,
-//     Seafood: 14.00
-// export const soup_choices = [8.95, 10, 12, 14];
-// export const soup_choice = [['Chicken', 'Tofu', 'Vegetables'], ['Beef', 'Pork'], 'Shrimp', 'Seafood'];
-
-
 export const appetizers = [
 	{
 		title: 'Wild Tiger Wings',
@@ -74,7 +63,7 @@ export const appetizers = [
 	}
 ];
 
-// Choice of Chicken, Tofu or Vegetables: $8.95, Beef or Pork: $10, Shrimp: $12, Seafood: $14
+
 export const soup = [
 	{
 		title: 'Tom Yum',
@@ -157,7 +146,7 @@ export const salads = [
 		price: 11.95
 	}
 ];
-// Served with steamed rice. Substitute brown rice add $1. Choice of Chicken, Tofu, Vegetable $11, Beef or Pork $12,Shrimp $14, Seafood $16
+
 export const stir_fried = [
 	{
 		title: 'Stir-Fried Cashew Nut',
