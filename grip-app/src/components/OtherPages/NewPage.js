@@ -43,8 +43,32 @@ const styles = theme => {
 
 class NewPage extends React.Component {
 	state = {
-		expanded: false,
-		winWidth: window.innerWidth
+		info: 'served with steamed rice. Substitute brown rice $1',
+		soup: [
+			{
+				subheader: 'Choice of',
+				gp1: 'Chicken, Tofu or Vegetables',
+				gp1Price: 8.95,
+				gp2: 'Beef or Pork',
+				gp2Price: 10,
+				shrimp: 'Shrimp',
+				shrimpPrice: 12,
+				seafood: 'Seafood',
+				seafoodPrice: 14
+			}
+		],
+		choice: [
+			{
+				gp1: 'Tofu or Vegetables',
+				gp1Price: 11,
+				gp2: 'Beef or Pork',
+				gp2Price: 12,
+				shrimp: 'Shrimp',
+				shrimpPrice: 14,
+				seafood: 'Seafood',
+				seafoodPrice: 16
+			}
+		]
 	};
 
 	render() {
