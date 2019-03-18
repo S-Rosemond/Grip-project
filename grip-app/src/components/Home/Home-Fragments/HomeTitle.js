@@ -2,16 +2,52 @@ import React, { Fragment } from 'react';
 
 import { Typography } from '@material-ui/core/';
 
-const Title = ({ title, subtitle, number }) => (
+const Title = ({
+	title,
+	subtitle,
+	number,
+	textColorMain,
+	textColor,
+	shadowFontMain,
+	shadowFont,
+	textStrokeMain,
+	textStroke,
+	typographyColor
+}) => (
 	<Fragment>
 		<Typography
 			variant="h6"
 			color="secondary"
-			style={{ fontFamily: 'ultra', textAlign: 'center', display: 'flex', flexDirection: 'column', fontSize: 25 }}
+			style={{
+				fontFamily: 'ultra',
+				textAlign: 'center',
+				display: 'flex',
+				flexDirection: 'column',
+				fontSize: 25,
+				marginBottom: 5,
+				marginTop: 15
+			}}
 		>
-			{title} <span style={{ color: '#ff8400' }}>{number}</span>
+			<span
+				style={{
+					color: textColorMain || textColor || '#da4444',
+					WebkitTextStroke: textStrokeMain || textStroke || 'none',
+					textShadow: shadowFontMain || shadowFont || 'none'
+				}}
+			>
+				{title}
+			</span>{' '}
+			<span
+				style={{
+					color: textColor || '#ff8400',
+					WebkitTextStroke: textStroke || 'none',
+					textShadow: shadowFont || 'none'
+				}}
+			>
+				{number}
+			</span>
 		</Typography>
-		<Typography color="textSecondary" align="center" style={{ fontWeight: 'bold' }}>
+		<Typography color={typographyColor} align="center" style={{ fontWeight: 'bold', marginBottom: 15 }}>
 			{subtitle}
 		</Typography>
 	</Fragment>
