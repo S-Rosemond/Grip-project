@@ -32,8 +32,9 @@ class HomePage extends Component {
 							title={'Wild Tiger Thai Cuisine & Bar'}
 							subtitle={'	1825 SE 164th AVE Suite 101 VANCOUVER, WA 98683'}
 							number={'360-882-8887'}
+							textColor="#ef0303"
 						/>
-						<Title number="Hours" textColor="#da4444" />
+						<Title number="Hours" subTextColor="#ef0303" />
 						<Time />
 						<Title subtitle="We are bringing new Thai flavor dishes to the South East of Vancouver, WA. " />
 						<Title

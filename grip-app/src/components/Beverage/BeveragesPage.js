@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { ContextConsumer } from '../../context/Context';
-import NewPage from './NewPage';
+
+import Tabs from '../Tabs/Tabs';
 
 export default function Beverages(props) {
 	return (
@@ -8,11 +9,7 @@ export default function Beverages(props) {
 			{value => {
 				return (
 					<Fragment>
-						<NewPage
-							menu={value.house_whine}
-							location={props.location.pathname}
-							display={value.whine_image}
-						/>
+						<Tabs />
 					</Fragment>
 				);
 			}}

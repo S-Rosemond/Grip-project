@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { ContextConsumer } from '../../context/Context';
-import NewPage from './NewPage';
 import Title from '../Home/Home-Fragments/HomeTitle';
+import Cart, { CartListing } from '../Cart/Cart';
 
 export default function Beverages(props) {
 	return (
@@ -10,6 +10,7 @@ export default function Beverages(props) {
 				return (
 					<Fragment>
 						<Title
+							fontsize="2.875rem"
 							number="Happy Hours"
 							subtitle="3:00pm - 6:00pm "
 							textStroke="#202020"
@@ -23,21 +24,14 @@ export default function Beverages(props) {
 							subtitle="HAPPY HOUR FOOD REQUIRES A MINIMUM OF ONE DRINK PER PERSON"
 							typographyColor="error"
 						/>
-
-						<NewPage
-							menu={value.happy_drinks}
-							location={props.location.pathname}
-							display={value.drunk_orig}
-						/>
-
-						<NewPage
-							menu={value.happy_appetizers}
-							location={props.location.pathname}
-							display={value.egg_rolls}
-						/>
+						<Cart banner="Drinks" cartlist={<CartListing list={value.happy_drinks} />} />
+						<Cart banner="Appetizers" cartlist={<CartListing list={value.happy_appetizers} />} />
 					</Fragment>
 				);
 			}}
 		</ContextConsumer>
 	);
 }
+
+// menu={value.happy_drinks}
+// menu={value.happy_appetizers}

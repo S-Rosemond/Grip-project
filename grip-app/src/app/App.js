@@ -8,10 +8,11 @@ import Pages from './Pages';
 const theme = createMuiTheme({
 	palette: {
 		primary: {
-			main: '#202020'
+			main: '#fff',
+			light: '#202020'
 		},
 		secondary: {
-			main: '#da4444'
+			main: '#ef0303'
 		}
 	},
 	typography: {

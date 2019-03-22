@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { ContextConsumer } from '../../context/Context';
-import NewPage from './NewPage';
-import ImagesSupplier from './NewPageImageSupplier/ImagesSupplier';
+import NewPage from '../OtherPages/NewPage';
+import ImagesSupplier from '../OtherPages/NewPageImageSupplier/ImagesSupplier';
 
 export default function Dessert(props) {
 	return (

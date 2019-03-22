@@ -1,6 +1,6 @@
 import React from 'react';
 import { ContextConsumer } from '../../context/Context';
-import NewPage from './NewPage';
+import NewPage from '../OtherPages/NewPage';
 
 export default function Menu(props) {
 	return (

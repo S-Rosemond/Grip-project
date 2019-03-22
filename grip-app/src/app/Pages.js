@@ -3,10 +3,10 @@ import { Route, Switch } from 'react-router-dom';
 import NavBar from '../components/NavBar/NavBar';
 import HomePage from './../components/Home/HomePage';
 import NotFound from './../components/NotFound';
-import DessertPage from '../components/OtherPages/DessertPage';
-import BeveragesPage from '../components/OtherPages/BeveragesPage';
-import MenuPage from '../components/OtherPages/MenuPage';
-import HappyHours from '../components/OtherPages/HappyHours';
+import DessertPage from '../components/Dessert/DessertPage';
+import BeveragesPage from '../components/Beverage/BeveragesPage';
+import MenuPage from '../components/Menu/MenuPage';
+import HappyHours from '../components/HappyHour/HappyHours';
 
 class Pages extends Component {
 	render() {

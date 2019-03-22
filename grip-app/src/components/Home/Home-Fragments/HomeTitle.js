@@ -8,11 +8,13 @@ const Title = ({
 	number,
 	textColorMain,
 	textColor,
+	subTextColor,
 	shadowFontMain,
 	shadowFont,
 	textStrokeMain,
 	textStroke,
-	typographyColor
+	typographyColor,
+	fontsize
 }) => (
 	<Fragment>
 		<Typography
@@ -39,9 +41,10 @@ const Title = ({
 			</span>{' '}
 			<span
 				style={{
-					color: textColor || '#ff8400',
+					color: subTextColor || '#ff8400',
 					WebkitTextStroke: textStroke || 'none',
-					textShadow: shadowFont || 'none'
+					textShadow: shadowFont || 'none',
+					fontSize: fontsize
 				}}
 			>
 				{number}

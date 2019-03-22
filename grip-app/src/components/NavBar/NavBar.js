@@ -121,7 +121,7 @@ class PersistentDrawerLeft extends React.Component {
 							style={{
 								fontFamily: 'ultra',
 								fontSize: '1.4em',
-								paddingLeft: '.2em',
+								marginLeft: '.7em',
 								textDecoration: 'none'
 							}}
 						>
