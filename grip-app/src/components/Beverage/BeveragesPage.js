@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
 import { ContextConsumer } from '../../context/Context';
-import Cart, { CartListing } from './../Cart/Cart';
-
 import Tabs from '../Tabs/Tabs';
+import Cart, { CartListing } from './../Cart/Cart';
 
 export default function Beverages(props) {
 	return (

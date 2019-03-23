@@ -71,9 +71,7 @@ function ScrollableTabsButtonAuto(props) {
 						{value === 0 && <TabContainer>{props.tabOne}</TabContainer>}
 						{value === 1 && <TabContainer>{props.tabTwo}</TabContainer>}
 						{value === 2 && <TabContainer>{props.tabThree}</TabContainer>}
-
 						{value === 3 && <TabContainer>{props.tabFour}</TabContainer>}
-
 						{value === 4 && <TabContainer>{props.tabFive}</TabContainer>}
 						{value === 5 && <TabContainer>{props.tabSix}</TabContainer>}
 

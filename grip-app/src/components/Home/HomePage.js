@@ -12,7 +12,14 @@ const styles = () => ({
 	root: {
 		flexGrow: 1
 	},
-	grow: { flexGrow: 1 }
+	grow: { flexGrow: 1 },
+	fb_Button: {
+		backgroundColor: '#da4444',
+		color: '#fff',
+		'&:hover': {
+			backgroundColor: '#3b5998'
+		}
+	}
 });
 
 class HomePage extends Component {
@@ -40,8 +47,8 @@ class HomePage extends Component {
 						<Title
 							title={
 								<Button
+									className={classes.fb_Button}
 									variant="contained"
-									color="secondary"
 									href="https://www.facebook.com/wildtigerthairestaurantofficialpage/"
 								>
 									FaceBook

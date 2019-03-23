@@ -1,6 +1,7 @@
 import React from 'react';
 import { ContextConsumer } from '../../context/Context';
-import NewPage from '../OtherPages/NewPage';
+import Tabs from '../Tabs/Tabs';
+import Cart, { CartListing } from './../Cart/Cart';
 
 export default function Menu(props) {
 	return (
@@ -8,34 +9,67 @@ export default function Menu(props) {
 			{value => {
 				return (
 					<React.Fragment>
-						<NewPage menu={value.appetizers} location={props.location.pathname} />
-
-						<NewPage menu={value.soup} headline="Soup" location={props.location.pathname} header="Soup" />
-						<NewPage
-							menu={value.wontonSoup}
-							display={value.pumpkin_shrimp}
-							location={props.location.pathname}
+						<Tabs
+							One="Appetizers"
+							Two="Soup"
+							Three="Salads"
+							Four="Fried Rice"
+							Five="Curry"
+							Six="Noodles"
+							Seven="Specials"
+							tabOne={<Cart banner="Appetizers" cartlist={<CartListing list={value.appetizers} />} />}
+							tabTwo={
+								<Cart
+									banner="Soup"
+									cartlist={<CartListing list={value.soup} />}
+									tabs={
+										<Tabs
+											One="Noodle Soup"
+											Two="Wonton Soup"
+											tabOne={
+												<Cart
+													banner="Noodle Soup"
+													cartlist={<CartListing list={value.noodle_soup} />}
+												/>
+											}
+											tabTwo={
+												<Cart
+													banner="Wonton Soup"
+													cartlist={<CartListing list={value.wontonSoup} />}
+												/>
+											}
+										/>
+									}
+								/>
+							}
+							tabThree={<Cart banner="Salads" cartlist={<CartListing list={value.salads} />} />}
+							tabFour={
+								<Cart
+									banner="Fried Rice"
+									cart={
+										<Cart banner="Stir-Fried" cartlist={<CartListing list={value.stir_fried} />} />
+									}
+									cartlist={<CartListing list={value.fried_rice} />}
+								/>
+							}
+							tabFive={
+								<Cart
+									banner="Curry"
+									cartlist={<CartListing list={value.curries} />}
+									cart={
+										<Cart banner="Special" cartlist={<CartListing list={value.pumpkin_curry} />} />
+									}
+								/>
+							}
+							tabSix={<Cart banner="Noodles" cartlist={<CartListing list={value.noodles} />} />}
+							tabSeven={
+								<Cart
+									banner="Specials"
+									cart={<Cart banner="Side" cartlist={<CartListing list={value.sides} />} />}
+									cartlist={<CartListing list={value.specials} />}
+								/>
+							}
 						/>
-						<NewPage menu={value.noodle_soup} display={value.khao_soi} location={props.location.pathname} />
-						<NewPage menu={value.salads} display={value.larb} location={props.location.pathname} />
-						<NewPage menu={value.noodles} display={value.pad_thai} location={props.location.pathname} />
-						<NewPage
-							menu={value.stir_fried}
-							display={value.chicken_cashew}
-							location={props.location.pathname}
-						/>
-						<NewPage menu={value.curries} display={value.duck_curry} location={props.location.pathname} />
-						<NewPage
-							menu={value.pumpkin_curry}
-							display={value.pumpkin_curr}
-							location={props.location.pathname}
-						/>
-						<NewPage
-							menu={value.fried_rice}
-							display={value.drunken_noodle}
-							location={props.location.pathname}
-						/>
-						<NewPage menu={value.specials} display={value.panang} location={props.location.pathname} />
 					</React.Fragment>
 				);
 			}}
