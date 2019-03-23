@@ -6,7 +6,6 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
-import Cart, { CartListing } from './../Cart/Cart';
 
 function TabContainer(props) {
 	return (
@@ -54,34 +53,31 @@ function ScrollableTabsButtonAuto(props) {
 								scrollButtons={widthVar ? null : 'on'}
 								centered={widthVar ? true : null}
 							>
-								<Tab label="Beverages" />
-								<Tab label="Beer" />
-								<Tab label="House Whine" />
-								<Tab label="Item Four" />
-								<Tab label="Item Five" />
-								<Tab label="Item Six" />
-								<Tab label="Item Seven" />
+								<Tab label={props.One || 'Item One'} />
+
+								{props.Two && <Tab label={props.Two || 'Item Two'} />}
+
+								{props.Three && <Tab label={props.Three || 'Item Three'} />}
+
+								{props.Four && <Tab label={props.Four || 'Item Four'} />}
+
+								{props.Five && <Tab label={props.Five || 'Item Five'} />}
+
+								{props.Six && <Tab label={props.Six || 'Item Six'} />}
+
+								{props.Seven && <Tab label={props.Seven || 'Item Seven'} />}
 							</Tabs>
 						</AppBar>
-						{value === 0 && (
-							<TabContainer>
-								<Cart banner="Beverages" cartlist={<CartListing list={context.drinks} />} />
-							</TabContainer>
-						)}
-						{value === 1 && (
-							<TabContainer>
-								<Cart banner="Beer" cartlist={<CartListing list={context.beer} />} />
-							</TabContainer>
-						)}
-						{value === 2 && (
-							<TabContainer>
-								<Cart banner="Drinks" cartlist={<CartListing list={context.house_whine} />} />
-							</TabContainer>
-						)}
-						{value === 3 && <TabContainer>Item Four</TabContainer>}
-						{value === 4 && <TabContainer>Item Five</TabContainer>}
-						{value === 5 && <TabContainer>Item Six</TabContainer>}
-						{value === 6 && <TabContainer>Item Seven</TabContainer>}
+						{value === 0 && <TabContainer>{props.tabOne}</TabContainer>}
+						{value === 1 && <TabContainer>{props.tabTwo}</TabContainer>}
+						{value === 2 && <TabContainer>{props.tabThree}</TabContainer>}
+
+						{value === 3 && <TabContainer>{props.tabFour}</TabContainer>}
+
+						{value === 4 && <TabContainer>{props.tabFive}</TabContainer>}
+						{value === 5 && <TabContainer>{props.tabSix}</TabContainer>}
+
+						{props.tabSeven && value === 6 && <TabContainer>{props.tabSeven}</TabContainer>}
 					</div>
 				);
 			}}
