@@ -1,8 +1,22 @@
 export const desserts = [
-	{ title: 'Coconut ice cream', price: 4 },
-	{ title: 'Mango Sticky Rice (seasonal)', price: 6 },
-	{ title: 'Lava Cake', price: 8 },
-	{ title: 'A Chocolate Mousse Cake a la mode', price: 8 }
+	{
+		title: 'Coconut ice cream',
+		price: 4,
+		image: ''
+	},
+	{
+		title: 'Mango Sticky Rice (seasonal)',
+		price: 6,
+		image: '/img/mango_ice.jpg'
+	},
+	{
+		title: 'Lava Cake',
+		price: 8
+	},
+	{
+		title: 'A Chocolate Mousse Cake a la mode',
+		price: 8
+	}
 ];
 export const drinks = [
 	{ title: 'Soda (refilled) ', price: 2 },

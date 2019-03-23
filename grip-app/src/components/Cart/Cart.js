@@ -4,6 +4,14 @@ import uuidv4 from 'uuid';
 import HRule from '../Util/HRule';
 import TitleDivider from './../Util/TitleDivider';
 import MenuTable from '../Table/MenuTable';
+import ImageRender from './../ImageSlider/ImageRender';
+
+const flex = {
+	justifySelf: 'center',
+	width: 50,
+	height: 50,
+	textAlign: 'center'
+};
 
 export const CartListing = props => {
 	return (
@@ -12,6 +20,11 @@ export const CartListing = props => {
 				return (
 					<React.Fragment key={uuidv4()}>
 						<span key={uuidv4()} style={{ justifySelf: 'center', marginTop: 15 }}>
+							<span style={flex}>
+								{!items.image ? null : window.innerWidth < 600 ? (
+									<ImageRender image={items.image} title={items.title} />
+								) : null}
+							</span>
 							{items.title} <TitleDivider />
 							<span style={{ fontFamily: 'Roboto', fontSize: '1.2rem', margin: '10px 0' }}>
 								{items.info ? items.info : ''}
