@@ -9,7 +9,7 @@ const TitleRule = styled.hr`
 	width: 35%;
 	border-radius: 0.5em;
 	@media (min-width: 768px) {
-		width: 15%;
+		width: 65%;
 	}
 `;
 
