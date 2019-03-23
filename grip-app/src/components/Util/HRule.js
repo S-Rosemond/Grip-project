@@ -8,8 +8,8 @@ const HorizontalRule = styled.hr`
 	border: 0;
 	color: black;
 	text-align: center;
-	height: 3.0em;
-	opacity: 0.5;
+	height: 2.0em;
+	opacity: 0.7;
 	&:before {
 		content: '';
 		background: linear-gradient(to right, transparent, #141414, transparent);
@@ -28,9 +28,9 @@ const HorizontalRule = styled.hr`
 		color: black ;
 		padding: 0 0.5em;
 		line-height: 1.5em;
-		color: #2196f3  ;
+		color: #ff8400 ;
     background-color: #fcfcfa;
-    font-size: 1.875rem;
+    font-size: 1.25rem;
     font-family: Ultra;
   }
  

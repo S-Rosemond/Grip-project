@@ -10,7 +10,6 @@ export default function Beverages(props) {
 				return (
 					<Fragment>
 						<Title
-							fontsize="2.875rem"
 							number="Happy Hours"
 							subtitle="3:00pm - 6:00pm "
 							textStroke="#202020"

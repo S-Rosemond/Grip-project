@@ -8,11 +8,11 @@ import { ContextConsumer } from '../../context/Context';
 const useStyles = makeStyles(() => ({
 	buttons: {
 		color: '#fff',
-		backgroundColor: '#2196f3',
+		backgroundColor: '#ff8400',
 		margin: '0 5px',
 		'&:hover': {
 			backgroundColor: '#fff',
-			color: '#2196f3'
+			color: '#ff8400'
 		}
 	}
 }));
