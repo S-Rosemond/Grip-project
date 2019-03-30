@@ -7,8 +7,9 @@ const Flow = styled.div`
 	display: grid;
 	text-align: center;
 	font-family: 'Ultra';
-	justify-items: 'center';
 	margin-bottom: 20px;
+	grid-row-gap: 1rem;
+	grid-column-gap: 1.1rem;
 	@media (min-width: 768px) {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);

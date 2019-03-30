@@ -2,7 +2,6 @@ export const desserts = [
 	{
 		title: 'Coconut ice cream',
 		price: 4,
-		image: '',
 		image: 'img/ice_cream.jpg'
 	},
 	{
@@ -12,7 +11,8 @@ export const desserts = [
 	},
 	{
 		title: 'Lava Cake',
-		price: 8
+		price: 8,
+		image: 'img/blur_cake_chocolate.jpg'
 	},
 	{
 		title: 'A Chocolate Mousse Cake a la mode',

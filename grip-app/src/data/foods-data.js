@@ -51,7 +51,8 @@ export const appetizers = [
 	{
 		title: 'Pot Sticker ',
 		info: 'Fried pork and cabbage dumpling served with ginger soy dipping sauce.',
-		price: 6.0
+		price: 6.0,
+		image: 'img/pot_stickers.jpg'
 	},
 	{
 		title: 'Golden Triangle ',
