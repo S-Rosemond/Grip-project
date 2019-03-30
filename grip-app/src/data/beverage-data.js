@@ -2,7 +2,8 @@ export const desserts = [
 	{
 		title: 'Coconut ice cream',
 		price: 4,
-		image: ''
+		image: '',
+		image: 'img/ice_cream.jpg'
 	},
 	{
 		title: 'Mango Sticky Rice (seasonal)',

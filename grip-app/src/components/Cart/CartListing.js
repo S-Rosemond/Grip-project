@@ -1,7 +1,7 @@
 import React from 'react';
 import uuidv4 from 'uuid';
 import TitleDivider from '../Util/TitleDivider';
-import ImageRender from './../ImageSlider/ImageRender';
+import ImageRender, { imageLayout } from './../ImageSlider/ImageRender';
 
 const layout = {
 	display: 'grid',
@@ -17,18 +17,26 @@ export const CartListing = props => {
 					<React.Fragment key={uuidv4()}>
 						<div>
 							<div key={uuidv4()} style={layout}>
-								{!items.image ? null : <ImageRender image={items.image} title={items.title} />}
+								{!items.image ? (
+									<div style={imageLayout} />
+								) : (
+									<ImageRender image={items.image} title={items.title} />
+								)}
 								<h2>{items.title}</h2>
 								<TitleDivider />
-							</div>
-							<span style={{ fontFamily: 'Roboto', fontSize: '1.2rem', margin: '10px 0' }}>
-								{items.info ? items.info : ''}
-							</span>
-						</div>
 
-						<span className="price" key={uuidv4()} style={{ justifySelf: 'center', margin: '10px 0' }}>
-							{!items.price ? null : <span>$ {items.price}</span>}
-						</span>
+								<span style={{ fontFamily: 'Roboto', fontSize: '1.2rem', margin: '10px 0' }}>
+									{items.info ? items.info : ''}
+								</span>
+								<span
+									className="price"
+									key={uuidv4()}
+									style={{ justifySelf: 'center', margin: '10px 0' }}
+								>
+									{!items.price ? null : <span>$ {items.price}</span>}
+								</span>
+							</div>
+						</div>
 					</React.Fragment>
 				);
 			})}

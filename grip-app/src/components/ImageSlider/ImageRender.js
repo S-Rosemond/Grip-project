@@ -1,9 +1,17 @@
 import React from 'react';
 
+//object fit scale down and cover both look good but with cover everything symmetrical
+export const imageLayout = {
+	height: 350,
+	width: '100%',
+	justifySelf: 'center',
+	objectFit: 'cover'
+};
+
 export default function ImageRender(props) {
 	return (
 		<React.Fragment>
-			<img style={{ height: 350, width: 350, justifySelf: 'center' }} src={props.image} alt={props.title} />
+			<img style={imageLayout} src={props.image} alt={props.title} />
 		</React.Fragment>
 	);
 }

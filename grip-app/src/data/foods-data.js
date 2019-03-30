@@ -2,12 +2,14 @@ export const appetizers = [
 	{
 		title: 'Wild Tiger Wings',
 		info: 'Marinated chicken wing, lightly breaded and fried until golden and crispy.',
-		price: 8.5
+		price: 8.5,
+		image: 'img/tiger_chicken.jpg'
 	},
 	{
 		title: 'Crispy Egg Rolls',
 		info: 'Silver noodle, taro, cabbage and carrot served with sweet & sour plum.',
-		price: 4.5
+		price: 4.5,
+		image: 'img/Egg_roll.jpg'
 	},
 	{
 		title: 'Crispy Tofu',
@@ -18,23 +20,27 @@ export const appetizers = [
 		title: 'Fresh Rolls',
 		info:
 			'Bean sprouts, lettuce, cilantro and soft rice noodle wrapped in fresh rice paper served with homemade peanut dipping sauce.',
-		price: 4.5
+		price: 4.5,
+		image: 'img/fresh_roll.jpg'
 	},
 	{
 		title: 'Fresh Shrimp Rolls ',
 		info:
 			'Bean sprouts, lettuce, cilantro and soft rice noodle wrapped in fresh rice paper served with homemade peanut dipping sauce.',
-		price: 6.0
+		price: 6.0,
+		image: 'img/fresh_roll_shrimp.jpg'
 	},
 	{
 		title: 'Crab Puffs',
 		info: 'Crispy wonton filled with imitation crab meat and cream cheese served with sweet & sour plum sauce.',
-		price: 6.5
+		price: 6.5,
+		image: 'img/crab_puff.jpg'
 	},
 	{
 		title: 'Coconut Prawn',
 		info: 'Crispy prawns with coconut shaving served with plum sauce.',
-		price: 7.5
+		price: 7.5,
+		image: 'img/coconut_prawns.jpg'
 	},
 	{
 		title: 'Satay Chicken ',
@@ -285,7 +291,8 @@ export const pumpkin_curry = [
 	{
 		title: 'Pumpkin Curry',
 		info: 'Golden pumpkin, lychee, bell pepper and basil in red curry sauce.',
-		price: ''
+		price: '',
+		image: 'img/pumpkin_chicken.jpg'
 	}
 ];
 export const noodles = [
@@ -293,7 +300,8 @@ export const noodles = [
 		title: 'Pad Thai',
 		info:
 			'Stir-fried wide-size rice in tamarind sauce with egg, bean sprout, and green onion served with chopped peanuts.',
-		price: ''
+		price: '',
+		image: 'img/pad_thai.jpg'
 	},
 	{
 		title: 'Pad See-Iew',
