@@ -14,7 +14,8 @@ export const appetizers = [
 	{
 		title: 'Crispy Tofu',
 		info: 'Crispy Japanese tofu served with sweet chili sauce and peanut.',
-		price: 4.5
+		price: 4.5,
+		image: 'img/crispy_tofu.jpg'
 	},
 	{
 		title: 'Fresh Rolls',
@@ -57,7 +58,8 @@ export const appetizers = [
 	{
 		title: 'Golden Triangle ',
 		info: 'Ground chicken and shrimp wrapped in a flour tortilla deep fried.',
-		price: 8.5
+		price: 8.5,
+		image: 'img/golden_triangle_replace.jpg'
 	},
 	{
 		title: 'Steam Mussels ',
@@ -68,7 +70,8 @@ export const appetizers = [
 	{
 		title: 'Crispy Calamari   ',
 		info: 'Crispy calamari served with siracha cream sauce.',
-		price: 10.0
+		price: 10.0,
+		image: 'img/calimari.jpg'
 	}
 ];
 
@@ -91,7 +94,8 @@ export const wontonSoup = [
 	{
 		title: 'Shrimp Wonton Soup ',
 		info: 'Shrimp wonton, shrimp, lettuce and bean sprout in clear broth soup.',
-		price: 8.0
+		price: 8.0,
+		image: 'img/tom_yum_shrimp_replace.jpg'
 	}
 ];
 
@@ -100,7 +104,8 @@ export const noodle_soup = [
 		title: 'Tom Yum Noodle Soup',
 		info:
 			'Rice noodle or egg noodle with ground chicken, squid, shrimp, and bean sprout topped with chopped peanuts.',
-		price: 12.95
+		price: 12.95,
+		image: 'img/tom_yum_noodle_replace.jpg'
 	},
 	{
 		title: 'Khao Soi',
@@ -111,7 +116,8 @@ export const noodle_soup = [
 	{
 		title: 'Clear Broth Noodle Soup',
 		info: 'Clear broth small rice noodle soup with bean sprout, cilantro and green onion.',
-		price: 12.95
+		price: 12.95,
+		image: 'img/clear_broth_replace.jpg'
 	}
 ];
 
@@ -120,36 +126,42 @@ export const salads = [
 		title: 'House Salad',
 		info:
 			'​Crispy tofu, hard boiled egg, lettuce, cucumber, grape tomato, red onion and cilantro served with curry peanut sweet and sour sauce.',
-		price: 4.0
+		price: 4.0,
+		image: 'img/house_salad_replace.jpg'
 	},
 	{
 		title: 'Grilled Chicken Salad',
 		info:
 			'​Crispy tofu, grilled chicken, hard boiled egg, lettuce, cucumber, grape tomato, red onion and cilantro served with curry peanut sweet and sour sauce.',
-		price: 7.0
+		price: 7.0,
+		image: 'img/grilled_salad_replace.jpg'
 	},
 	{
 		title: 'Beef Salad   ',
 		info:
 			'Grilled beef sirloin, tomato, cucumber, red onion, bell pepper, mints and cilantro with spicy lime dressing.',
-		price: 12.95
+		price: 12.95,
+		image: 'img/beef_salad_replace.jpg'
 	},
 	{
 		title: 'Papaya Salad ',
 		info: 'Shredded green papaya, Thai chili, green bean, tomato and peanut with spicy lime dressing.',
-		price: 3.0
+		price: 3.0,
+		image: 'img/papaya_replace.jpg'
 	},
 	{
 		title: 'Grilled Shrimp Papaya Salad',
 		info:
 			'Shredded green papaya, grilled shrimp, Thai chili, green bean, tomato and peanut with spicy lime dressing.',
-		price: 8.0
+		price: 8.0,
+		image: 'img/shrimp_papaya_replace.jpg'
 	},
 	{
 		title: 'Glass Noodle Salad',
 		info:
 			'Steam glass noodle, ground chicken, shrimp, squid, onion, red onion, mint, cilantro tossed with chili lime juice and sweet chili paste.',
-		price: 12.95
+		price: 12.95,
+		image: 'img/glass_salad_replace.jpg'
 	},
 	{
 		title: 'Larb',
@@ -239,18 +251,21 @@ export const fried_rice = [
 	{
 		title: 'Traditional Fried Rice',
 		info: 'Stir-fried rice with egg, onion, grape tomato, peas, and carrot.',
-		price: ''
+		price: '',
+		image: 'img/crab_fried_rice.jpg'
 	},
 	{
 		title: 'Pineapple Fried Rice',
 		info:
 			'Stir-fried rice with curry powder, egg, pineapple, cashew nut, raisins, onion, grape tomato, pea and carrot.',
-		price: ''
+		price: '',
+		image: 'img/shrimp_rice.jpg'
 	},
 	{
 		title: 'Basil Fried Rice',
 		info: 'Stir-fried rice with egg, fresh chili, bell pepper, onion, and basil.',
-		price: ''
+		price: '',
+		image: 'img/basil_rice_replace.jpg'
 	}
 ];
 
