@@ -16,21 +16,62 @@ export const desserts = [
 	},
 	{
 		title: 'A Chocolate Mousse Cake a la mode',
-		price: 8
+		price: 8,
+		image: 'img/chocolate_replace.jpg'
 	}
 ];
 export const drinks = [
-	{ title: 'Soda (refilled) ', price: 2 },
-	{ title: 'Regular Iced Tea', price: 2.5 },
-	{ title: 'Thai Iced Tea   ', price: 3 },
-	{ title: 'Fresh Lime juice with soda  ', price: 3 },
-	{ title: 'Mango Juice ', price: 3 },
-	{ title: 'Coconut Juice', price: 3 },
-	{ title: 'Orange Juice', price: 3 },
-	{ title: 'Sparkling Water ', price: 3 },
-	{ title: 'Thai Iced Coffee ', price: 3 },
-	{ title: 'Hot Tea pot ', price: 4 },
-	{ title: 'Hot Tea Cup  ', price: 2 }
+	{
+		title: 'Soda (refilled)',
+		price: 2
+	},
+	{
+		title: 'Regular Iced Tea',
+		price: 2.5,
+		image: 'img/ice_tea_replace.jpg'
+	},
+	{
+		title: 'Thai Iced Tea   ',
+		price: 3,
+		image: 'img/Thai_iced_tea.jpg'
+	},
+	{
+		title: 'Fresh Lime juice with soda',
+		price: 3,
+		image: 'img/lime_soda_handintheway.jpg'
+	},
+	{
+		title: 'Mango Juice',
+		price: 3,
+		image: 'img/mango_marg.jpg'
+	},
+	{
+		title: 'Coconut Juice',
+		price: 3,
+		image: 'img/coconut_juice.jpg'
+	},
+	{
+		title: 'Orange Juice',
+		price: 3,
+		image: 'img/orange_juice.jpg'
+	},
+	{
+		title: 'Sparkling Water',
+		price: 3
+	},
+	{
+		title: 'Thai Iced Coffee',
+		price: 3,
+		image: 'img/thai_ice_coffee.jpg'
+	},
+	{
+		title: 'Hot Tea pot',
+		price: 4
+	},
+	{
+		title: 'Hot Tea Cup',
+		price: 2
+	}
 ];
 export const beer = [
 	{ title: ' Bud Light, Coor Light', price: 3.5 },

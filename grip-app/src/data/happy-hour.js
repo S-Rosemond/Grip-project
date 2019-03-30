@@ -33,7 +33,8 @@ export const happy_appetizers = [
 	},
 	{
 		title: 'Drunken noodle chicken',
-		price: 6.5
+		price: 6.5,
+		image: 'img/drunken_noodle.jpg'
 	},
 	{
 		title: 'Pad Thai chicken    ',

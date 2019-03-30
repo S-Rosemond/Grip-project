@@ -1,13 +1,20 @@
 import React from 'react';
 import uuidv4 from 'uuid';
+import styled from 'styled-components';
 import TitleDivider from '../Util/TitleDivider';
 import ImageRender, { imageLayout } from './../ImageSlider/ImageRender';
 
-const layout = {
-	display: 'grid',
-	justifyContent: 'center',
-	marginTop: 15
-};
+const LayoutDiv = styled.div`
+	display: grid;
+	justify-content: center;
+	margin-top: 15px;
+	box-shadow: 0 0 10px;
+	border-bottom-right-radius: 0.4em;
+	border-bottom-left-radius: 0.4em;
+	@media (max-width: 768px) {
+		box-shadow: 0 0 10px;
+	}
+`;
 
 export const CartListing = props => {
 	return (
@@ -15,28 +22,22 @@ export const CartListing = props => {
 			{props.list.map(items => {
 				return (
 					<React.Fragment key={uuidv4()}>
-						<div>
-							<div key={uuidv4()} style={layout}>
-								{!items.image ? (
-									<div style={imageLayout} />
-								) : (
-									<ImageRender image={items.image} title={items.title} />
-								)}
-								<h2>{items.title}</h2>
-								<TitleDivider />
+						<LayoutDiv key={uuidv4()}>
+							{items.image ? (
+								<ImageRender image={items.image} title={items.title} />
+							) : !items.info ? null : (
+								<div style={imageLayout} />
+							)}
+							<h2>{items.title}</h2>
+							<TitleDivider />
 
-								<span style={{ fontFamily: 'Roboto', fontSize: '1.2rem', margin: '10px 0' }}>
-									{items.info ? items.info : ''}
-								</span>
-								<span
-									className="price"
-									key={uuidv4()}
-									style={{ justifySelf: 'center', margin: '10px 0' }}
-								>
-									{!items.price ? null : <span>$ {items.price}</span>}
-								</span>
-							</div>
-						</div>
+							<span style={{ fontFamily: 'Roboto', fontSize: '1.1rem', margin: '10px' }}>
+								{items.info ? items.info : ''}
+							</span>
+							<span style={{ margin: 10 }} key={uuidv4()}>
+								{!items.price ? null : <span>{`$ ${items.price}`}</span>}
+							</span>
+						</LayoutDiv>
 					</React.Fragment>
 				);
 			})}

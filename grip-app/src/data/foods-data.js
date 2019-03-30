@@ -62,7 +62,8 @@ export const appetizers = [
 	{
 		title: 'Steam Mussels ',
 		info: 'Steam blue mussels with aromatic lemongrass and set in basil broth',
-		price: 9.0
+		price: 9.0,
+		image: 'img/mussel.jpg'
 	},
 	{
 		title: 'Crispy Calamari   ',
@@ -75,12 +76,14 @@ export const soup = [
 	{
 		title: 'Tom Yum',
 		info: 'Spicy lemongrass broth soup with kaffir, tomato, mushroom, onion and lime juice.',
-		price: ''
+		price: '',
+		image: 'img/tom_yum.jpg'
 	},
 	{
 		title: 'Tom Kha',
 		info: 'Galangal, lemongrass, kaffir leaves, mushroom, cabbage, lime juice and coconut milk.',
-		price: ''
+		price: '',
+		image: 'img/tom_kha.jpg'
 	}
 ];
 
@@ -102,7 +105,8 @@ export const noodle_soup = [
 	{
 		title: 'Khao Soi',
 		info: 'Egg noodle, shallot, cilantro in Chiang Mai curry soup topped with crispy egg noodle.',
-		price: 12.95
+		price: 12.95,
+		image: 'img/khao_soi.jpg'
 	},
 	{
 		title: 'Clear Broth Noodle Soup',
@@ -150,7 +154,8 @@ export const salads = [
 	{
 		title: 'Larb',
 		info: 'Ground chicken roosted rice powder, red onion, mint, cilantro, tossed with chili lime juice.',
-		price: 11.95
+		price: 11.95,
+		image: 'img/larb.jpg'
 	}
 ];
 
@@ -196,7 +201,8 @@ export const curries = [
 	{
 		title: 'Red curry',
 		info: 'Red curry with coconut milk, bamboo shoot, bell pepper, and basil.',
-		price: ''
+		price: '',
+		image: 'img/red_curry_replace.jpg'
 	},
 	{
 		title: 'Green curry',
@@ -213,7 +219,8 @@ export const curries = [
 	{
 		title: 'Panang curry',
 		info: 'A Panang curry with coconut milk, green bean, and bell peppers topped with ground peanut.',
-		price: ''
+		price: '',
+		image: 'img/panang_orig.jpg'
 	},
 	{
 		title: 'Mussaman curry',
@@ -257,23 +264,27 @@ export const specials = [
 		title: 'Volcano Beef',
 		info:
 			'Stir-fried beef sirloin, tomato, onion, asparagus, bell pepper, pineapple, grape tomato in house specials sauce.',
-		price: 16
+		price: 16,
+		image: 'img/volcano_beef.jpg'
 	},
 	{
 		title: 'Teriyaki Chicken',
 		info: 'Charcoal boiled chicken with steam vegetable and rice.',
-		price: 13
+		price: 13,
+		image: 'img/teriyaki_replace.jpg'
 	},
 	{
 		title: 'Three flavors Salmon ',
 		info:
 			'Pan-fried sockeye salmon, topped with three-flavor dressing, green bean, onion and bell pepper topped with crisp basil.',
-		price: 15
+		price: 15,
+		image: 'img/three_flavor_salmon.jpg'
 	},
 	{
 		title: 'Crispy Duck Curry',
 		info: 'Red curry with half roasted duck, pineapple, bell pepper, grape tomatoes, lychee and basil.',
-		price: 21
+		price: 21,
+		image: 'img/duck_curry.jpg'
 	},
 
 	{
@@ -284,7 +295,8 @@ export const specials = [
 	{
 		title: 'Lemongrass Chicken  ',
 		info: 'Grilled marinated lemongrass chicken with  steamed vegetable and topped with peanut sauce..',
-		price: 13
+		price: 13,
+		image: 'img/lemongrass_replace.jpg'
 	}
 ];
 
@@ -307,12 +319,14 @@ export const noodles = [
 	{
 		title: 'Pad See-Iew',
 		info: 'Stir-fried wide-size rice noodle with egg, carrot, broccoli and sweet soy sauce.',
-		price: ''
+		price: '',
+		image: 'img/pad_see_iew.jpg'
 	},
 	{
 		title: 'Pad Woon-Sen',
 		info: 'Stir-fried wide-size rice noodle with egg, cabbage, onion and bean sprout in house soy sauce.',
-		price: ''
+		price: '',
+		image: 'img/pad_woon_sen.jpg'
 	}
 ];
 
