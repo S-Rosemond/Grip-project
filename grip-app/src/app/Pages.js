@@ -1,12 +1,12 @@
 import React, { Component, Fragment } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import NavBar from '../components/NavBar/NavBar';
-import HomePage from './../components/Home/HomePage';
-import NotFound from './../components/NotFound';
-import DessertPage from '../components/Dessert/DessertPage';
-import BeveragesPage from '../components/Beverage/BeveragesPage';
-import MenuPage from '../components/Menu/MenuPage';
-import HappyHours from '../components/HappyHour/HappyHours';
+import NotFound from '../Pages/NotFound';
+import HomePage from '../Pages/HomePage/HomePage';
+import MenuPage from '../Pages/MenuPage/MenuPage';
+import DessertPage from '../Pages/DessertPage/DessertPage';
+import BeveragesPage from '../Pages/BeveragePage/BeveragesPage';
+import HappyHours from '../Pages/HappyHourPage/HappyHours';
 
 class Pages extends Component {
 	render() {

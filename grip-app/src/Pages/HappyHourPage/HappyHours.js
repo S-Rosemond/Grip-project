@@ -1,7 +1,8 @@
 import React, { Fragment } from 'react';
 import { ContextConsumer } from '../../context/Context';
-import Title from '../Home/Home-Fragments/HomeTitle';
-import Cart, { CartListing } from '../Cart/Cart';
+import Title from '../../Pages/HomePage/Home-Fragments/HomeTitle';
+import Cart from '../../components/Cart/Cart';
+import { CartListing } from '../../components/Cart/CartListing';
 
 export default function Beverages(props) {
 	return (

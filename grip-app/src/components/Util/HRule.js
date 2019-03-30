@@ -8,7 +8,7 @@ const HorizontalRule = styled.hr`
 	border: 0;
 	color: black;
 	text-align: center;
-	height: 2.0em;
+	height: 4.0em;
 	opacity: 0.7;
 	&:before {
 		content: '';
@@ -30,7 +30,7 @@ const HorizontalRule = styled.hr`
 		line-height: 1.5em;
 		color: #ff8400 ;
     background-color: #fcfcfa;
-    font-size: 1.25rem;
+    font-size: 2.25rem;
     font-family: Ultra;
   }
  

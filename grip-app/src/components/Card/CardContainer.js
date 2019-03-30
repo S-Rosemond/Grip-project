@@ -1,16 +1,18 @@
 import React from 'react';
-import styled from 'styled-components';
 import HRule from '../Util/HRule';
 import MenuTable from '../Table/MenuTable';
+import styled from 'styled-components';
 
-const Flow = styled.div`
+const CardGrid = styled.div`
 	display: grid;
 	text-align: center;
 	font-family: 'Ultra';
-	justify-items: 'center';
+	justify-content: center;
 	margin-bottom: 20px;
+	grid-row-gap: 1rem;
 	@media (min-width: 768px) {
 		display: grid;
+		grid-gap: 1rem;
 		grid-template-columns: repeat(4, 1fr);
 		.price {
 			align-self: center;
@@ -18,14 +20,14 @@ const Flow = styled.div`
 	}
 `;
 
-export default function Cart(props) {
-	const stringChecks = 'Soup' || 'Stir-Fried' || 'Noodles' || 'Curry';
+const CardContainer = props => {
 	return (
 		<React.Fragment>
 			{!props.price ? null : <MenuTable />}
 			<HRule content={props.banner} />
-			<Flow>{props.cartlist}</Flow>
-			{props.tabs ? props.tabs : props.cart ? props.cart : null}
+			<CardGrid>{props.cardlist}</CardGrid>
 		</React.Fragment>
 	);
-}
+};
+
+export default CardContainer;

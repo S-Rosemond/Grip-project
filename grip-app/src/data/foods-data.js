@@ -39,7 +39,8 @@ export const appetizers = [
 	{
 		title: 'Satay Chicken ',
 		info: 'Grilled marinated chicken skewers served with peanut sauce and cucumber sauce.',
-		price: 8.5
+		price: 8.5,
+		image: 'img/satay_chicken.jpg'
 	},
 	{
 		title: 'Pot Sticker ',
@@ -62,7 +63,6 @@ export const appetizers = [
 		price: 10.0
 	}
 ];
-
 
 export const soup = [
 	{
@@ -194,12 +194,14 @@ export const curries = [
 	{
 		title: 'Green curry',
 		info: 'Green curry with coconut milk, bamboo shoot, bell pepper, eggplant and basil.',
-		price: ''
+		price: '',
+		image: 'img/green_curry.jpg'
 	},
 	{
 		title: 'Yellow curry',
 		info: 'Yellow curry with coconut milk, potato, onion, carrot and sprinkled with shallots.',
-		price: ''
+		price: '',
+		image: 'img/yellow_curry.jpg'
 	},
 	{
 		title: 'Panang curry',

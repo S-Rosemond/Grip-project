@@ -1,7 +1,8 @@
 import React from 'react';
 import { ContextConsumer } from '../../context/Context';
-import Tabs from '../Tabs/Tabs';
-import Cart, { CartListing } from './../Cart/Cart';
+import Tabs from '../../components/Tabs/Tabs';
+import Cart from '../../components/Cart/Cart';
+import { CartListing } from '../../components/Cart/CartListing';
 
 export default function Menu(props) {
 	return (
