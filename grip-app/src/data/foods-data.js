@@ -238,7 +238,8 @@ export const curries = [
 		title: 'Mussaman curry',
 		info:
 			'A mild slow cooked curry made with a blend of spices including nutmeg, cumin and cloves in coconut milk with onion, carrot, potato, and peanuts.',
-		price: ''
+		price: '',
+		image: 'img/mussaman.jpg'
 	},
 	{
 		title: 'Jungle curry',

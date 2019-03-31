@@ -4,7 +4,7 @@ import Tabs from '../../components/Tabs/Tabs';
 import Cart from '../../components/Cart/Cart';
 import { CartListing } from '../../components/Cart/CartListing';
 
-export default function Beverages(props) {
+export default function Beverages() {
 	return (
 		<ContextConsumer>
 			{value => {

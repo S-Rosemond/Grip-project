@@ -1,15 +1,16 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { ContextConsumer } from '../../context/Context';
 import Title from '../../Pages/HomePage/Home-Fragments/HomeTitle';
 import Cart from '../../components/Cart/Cart';
 import { CartListing } from '../../components/Cart/CartListing';
+import { TabContainer } from './../../components/Tabs/Tabs';
 
-export default function Beverages(props) {
+export default function Beverages() {
 	return (
 		<ContextConsumer>
 			{value => {
 				return (
-					<Fragment>
+					<TabContainer>
 						<Title
 							number="Happy Hours"
 							subtitle="3:00pm - 6:00pm "
@@ -26,12 +27,9 @@ export default function Beverages(props) {
 						/>
 						<Cart banner="Drinks" cartlist={<CartListing list={value.happy_drinks} />} />
 						<Cart banner="Appetizers" cartlist={<CartListing list={value.happy_appetizers} />} />
-					</Fragment>
+					</TabContainer>
 				);
 			}}
 		</ContextConsumer>
 	);
 }
-
-// menu={value.happy_drinks}
-// menu={value.happy_appetizers}

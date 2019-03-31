@@ -1,7 +1,7 @@
 import React from 'react';
 import { Typography } from '@material-ui/core/';
 
-export default function HomeTime(props) {
+export default function HomeTime() {
 	const days = ['MONDAY   ', 'TUESDAY  ', 'WEDNESDAY ', 'THURSDAY', 'FRIDAY', 'SATURDAY', 'SUNDAY'];
 
 	return (

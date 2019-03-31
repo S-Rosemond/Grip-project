@@ -1,16 +1,17 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { ContextConsumer } from '../../context/Context';
 import Cart from '../../components/Cart/Cart';
 import { CartListing } from './../../components/Cart/CartListing';
+import { TabContainer } from './../../components/Tabs/Tabs';
 
-export default function Dessert(props) {
+export default function Dessert() {
 	return (
 		<ContextConsumer>
 			{value => {
 				return (
-					<Fragment>
+					<TabContainer>
 						<Cart banner="Desserts" cartlist={<CartListing list={value.desserts} />} />
-					</Fragment>
+					</TabContainer>
 				);
 			}}
 		</ContextConsumer>
