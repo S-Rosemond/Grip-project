@@ -175,7 +175,8 @@ export const stir_fried = [
 	{
 		title: 'Stir-Fried Cashew Nut',
 		info: 'Onion, celery, bell pepper, carrot, and cashew nut in roasted sweet chili sauce.',
-		price: ''
+		price: '',
+		image: 'img/stir_fried_cashew.jpg'
 	},
 	{
 		title: 'Stir-Fried Fresh Ginger',
@@ -185,27 +186,32 @@ export const stir_fried = [
 	{
 		title: 'Stir-Fried Garlic',
 		info: 'Sautéed roasted garlic, onion, mushroom, and cilantro in black pepper sauce over a bed of broccoli. ',
-		price: ''
+		price: '',
+		image: 'img/stir_fried_garlic.jpg'
 	},
 	{
 		title: 'Stir-Fried Mixed Vegetables',
 		info: 'Stir-fried mixed vegetables in a wok with garlic soy sauce. ',
-		price: ''
+		price: '',
+		image: 'img/stir_fried_mix_replace.jpg'
 	},
 	{
 		title: 'Pra Ram',
 		info: 'Steamed mixed vegetables topped with house peanut sauce. Served with steamed rice.',
-		price: ''
+		price: '',
+		image: 'img/pa_ram.jpg'
 	},
 	{
 		title: 'Stir-Fried Eggplant ',
 		info: 'Onion, bell pepper, eggplant, and basil in roasted sweet chili sauce. ',
-		price: ''
+		price: '',
+		image: 'img/stir_fried_eggplant_replace.jpg'
 	},
 	{
 		title: 'Stir-Fried Basil',
 		info: 'Stir-fried ground chicken with bell pepper, green bean, onion and basil.',
-		price: 11.95
+		price: 11.95,
+		image: 'img/stir_fried_basil.jpg'
 	}
 ];
 
@@ -244,7 +250,8 @@ export const curries = [
 	{
 		title: 'Jungle curry',
 		info: 'Spicy clear red curry with Thai herbs, fresh vegetables, bamboo shoot, mushroom, bell pepper and basil.',
-		price: ''
+		price: '',
+		image: 'img/pumpkin_shrimp.jpg'
 	}
 ];
 
@@ -274,7 +281,8 @@ export const specials = [
 	{
 		title: 'Panang Curry Jumbo Prawn',
 		info: 'Grilled jumbo prawn topped with panang curry, bell pepper, green bean and asparagus.',
-		price: 17
+		price: 17,
+		image: 'img/pan_curry.jpg'
 	},
 	{
 		title: 'Volcano Beef',
@@ -306,13 +314,14 @@ export const specials = [
 	{
 		title: 'Dungeness Crab Fried Rice',
 		info: 'Crab meat, jasmine rice, egg, green onion and pea-carrot.',
-		price: 16
+		price: 16,
+		image: 'img/fried_crab_replace.jpg'
 	},
 	{
 		title: 'Lemongrass Chicken  ',
 		info: 'Grilled marinated lemongrass chicken with  steamed vegetable and topped with peanut sauce..',
 		price: 13,
-		image: 'img/lemongrass_replace.jpg'
+		image: 'img/lemongrass.jpg'
 	}
 ];
 

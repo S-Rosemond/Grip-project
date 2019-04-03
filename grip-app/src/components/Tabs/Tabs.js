@@ -35,7 +35,7 @@ function ScrollableTabsButtonAuto(props) {
 		setValue(newValue);
 	}
 
-	const widthVar = Boolean(window.innerWidth > 762);
+	const widthVar = Boolean(window.innerWidth > 425);
 
 	return (
 		<div className={classes.root}>

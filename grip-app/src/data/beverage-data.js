@@ -23,7 +23,8 @@ export const desserts = [
 export const drinks = [
 	{
 		title: 'Soda (refilled)',
-		price: 2
+		price: 2,
+		image: 'img/soda_blandonpurpose.jpg'
 	},
 	{
 		title: 'Regular Iced Tea',
@@ -33,7 +34,7 @@ export const drinks = [
 	{
 		title: 'Thai Iced Tea   ',
 		price: 3,
-		image: 'img/Thai_iced_tea.jpg'
+		image: 'img/Thai_ice_tea.jpg'
 	},
 	{
 		title: 'Fresh Lime juice with soda',
@@ -48,7 +49,7 @@ export const drinks = [
 	{
 		title: 'Coconut Juice',
 		price: 3,
-		image: 'img/coconut_juice.jpg'
+		image: 'img/coconut_replace2.jpg'
 	},
 	{
 		title: 'Orange Juice',
@@ -57,20 +58,23 @@ export const drinks = [
 	},
 	{
 		title: 'Sparkling Water',
-		price: 3
+		price: 3,
+		image: 'img/water.jpg'
 	},
 	{
 		title: 'Thai Iced Coffee',
 		price: 3,
-		image: 'img/thai_ice_coffee.jpg'
+		image: 'img/thai_iced_coffee.jpg'
 	},
 	{
 		title: 'Hot Tea pot',
-		price: 4
+		price: 4,
+		image: 'img/hot_tea_pot2.jpg'
 	},
 	{
 		title: 'Hot Tea Cup',
-		price: 2
+		price: 2,
+		image: 'img/hot_tea.jpg'
 	}
 ];
 export const beer = [
