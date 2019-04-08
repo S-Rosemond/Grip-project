@@ -19,30 +19,7 @@ export default function Menu() {
 							Six="Noodles"
 							Seven="Specials"
 							tabOne={<Cart banner="Appetizers" cartlist={<CartListing list={value.appetizers} />} />}
-							tabTwo={
-								<Cart
-									banner="Soup"
-									cartlist={<CartListing list={value.soup} />}
-									tabs={
-										<Tabs
-											One="Noodle Soup"
-											Two="Wonton Soup"
-											tabOne={
-												<Cart
-													banner="Noodle Soup"
-													cartlist={<CartListing list={value.noodle_soup} />}
-												/>
-											}
-											tabTwo={
-												<Cart
-													banner="Wonton Soup"
-													cartlist={<CartListing list={value.wontonSoup} />}
-												/>
-											}
-										/>
-									}
-								/>
-							}
+							tabTwo={<Cart banner="Soup" cartlist={<CartListing list={value.soup} />} />}
 							tabThree={<Cart banner="Salads" cartlist={<CartListing list={value.salads} />} />}
 							tabFour={
 								<Cart
@@ -53,15 +30,7 @@ export default function Menu() {
 									cartlist={<CartListing list={value.fried_rice} />}
 								/>
 							}
-							tabFive={
-								<Cart
-									banner="Curry"
-									cartlist={<CartListing list={value.curries} />}
-									cart={
-										<Cart banner="Special" cartlist={<CartListing list={value.pumpkin_curry} />} />
-									}
-								/>
-							}
+							tabFive={<Cart banner="Curry" cartlist={<CartListing list={value.curries} />} />}
 							tabSix={<Cart banner="Noodles" cartlist={<CartListing list={value.noodles} />} />}
 							tabSeven={
 								<Cart

@@ -5,7 +5,8 @@ export const imageLayout = {
 	height: 350,
 	width: '100%',
 	justifySelf: 'center',
-	objectFit: 'cover'
+	objectFit: 'cover',
+	borderRadius: '0.2em'
 };
 
 export default function ImageRender(props) {

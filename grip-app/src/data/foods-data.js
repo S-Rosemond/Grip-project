@@ -87,19 +87,13 @@ export const soup = [
 		info: 'Galangal, lemongrass, kaffir leaves, mushroom, cabbage, lime juice and coconut milk.',
 		price: '',
 		image: 'img/tom_kha.jpg'
-	}
-];
-
-export const wontonSoup = [
+	},
 	{
 		title: 'Shrimp Wonton Soup ',
 		info: 'Shrimp wonton, shrimp, lettuce and bean sprout in clear broth soup.',
 		price: 8.0,
 		image: 'img/tom_yum_shrimp_replace.jpg'
-	}
-];
-
-export const noodle_soup = [
+	},
 	{
 		title: 'Tom Yum Noodle Soup',
 		info:
@@ -252,6 +246,12 @@ export const curries = [
 		info: 'Spicy clear red curry with Thai herbs, fresh vegetables, bamboo shoot, mushroom, bell pepper and basil.',
 		price: '',
 		image: 'img/pumpkin_shrimp.jpg'
+	},
+	{
+		title: 'Pumpkin Curry',
+		info: 'Golden pumpkin, lychee, bell pepper and basil in red curry sauce.',
+		price: '',
+		image: 'img/pumpkin_chicken.jpg'
 	}
 ];
 
@@ -325,14 +325,6 @@ export const specials = [
 	}
 ];
 
-export const pumpkin_curry = [
-	{
-		title: 'Pumpkin Curry',
-		info: 'Golden pumpkin, lychee, bell pepper and basil in red curry sauce.',
-		price: '',
-		image: 'img/pumpkin_chicken.jpg'
-	}
-];
 export const noodles = [
 	{
 		title: 'Pad Thai',

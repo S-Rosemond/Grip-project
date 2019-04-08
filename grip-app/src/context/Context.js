@@ -5,13 +5,10 @@ import {
 	curries,
 	fried_rice,
 	noodles,
-	noodle_soup,
-	pumpkin_curry,
 	sides,
 	soup,
 	specials,
 	stir_fried,
-	wontonSoup,
 	salads
 } from '../data/foods-data';
 
@@ -51,13 +48,10 @@ class ContextScope extends Component {
 		appetizers,
 		curries,
 		fried_rice,
-		noodle_soup,
-		pumpkin_curry,
 		sides,
 		soup,
 		specials,
 		stir_fried,
-		wontonSoup,
 		salads,
 		beer,
 		desserts,

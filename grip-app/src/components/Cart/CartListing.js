@@ -9,11 +9,7 @@ const LayoutDiv = styled.div`
 	justify-content: center;
 	margin-top: 15px;
 	box-shadow: 0 0 10px;
-	border-bottom-right-radius: 0.4em;
-	border-bottom-left-radius: 0.4em;
-	@media (max-width: 768px) {
-		box-shadow: 0 0 10px;
-	}
+	border-radius: 0.4em;
 `;
 
 export const CartListing = props => {
@@ -22,7 +18,7 @@ export const CartListing = props => {
 			{props.list.map(items => {
 				return (
 					<React.Fragment key={uuidv4()}>
-						<LayoutDiv key={uuidv4()}>
+						<LayoutDiv test={items.image !== undefined ? true : false} key={uuidv4()}>
 							{items.image ? (
 								<ImageRender image={items.image} title={items.title} />
 							) : !items.info ? null : (
