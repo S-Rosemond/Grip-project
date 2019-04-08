@@ -7,6 +7,7 @@ import MenuPage from '../Pages/MenuPage/MenuPage';
 import DessertPage from '../Pages/DessertPage/DessertPage';
 import BeveragesPage from '../Pages/BeveragePage/BeveragesPage';
 import HappyHours from '../Pages/HappyHourPage/HappyHours';
+import Footer from '../components/Footer/Footer.js';
 
 class Pages extends Component {
 	render() {
