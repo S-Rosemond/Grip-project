@@ -175,7 +175,8 @@ export const stir_fried = [
 	{
 		title: 'Stir-Fried Fresh Ginger',
 		info: 'Fresh ginger, mushroom, onion, carrot, and bell pepper.',
-		price: ''
+		price: '',
+		image: 'img/ginger.jpg'
 	},
 	{
 		title: 'Stir-Fried Garlic',

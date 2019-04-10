@@ -24,7 +24,7 @@ export default function Cart(props) {
 	return (
 		<React.Fragment>
 			{!props.price ? null : <MenuTable />}
-			<HRule content={props.banner} />
+
 			<Flow>{props.cartlist}</Flow>
 			{props.tabs ? props.tabs : props.cart ? props.cart : null}
 		</React.Fragment>

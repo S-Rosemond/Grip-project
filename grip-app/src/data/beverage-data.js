@@ -78,17 +78,23 @@ export const drinks = [
 	}
 ];
 export const beer = [
-	{ title: ' Bud Light, Coor Light', price: 3.5 },
-	{ title: ' Singha, Tsingtao, Sapporo, Tiger, Heineken', price: 4.5 }
+	{ title: ' Bud Light, Coor Light', price: 3.5, image: 'img/beer.jpg' },
+	{ title: ' Singha, Tsingtao, Sapporo, Tiger, Heineken', price: 4.5, image: 'img/dark_beer.jpg' }
 ];
-export const house_whine = [{ title: ' All house wine: Chardonnay, Cabernet Sauvignon, Merot, Resling', price: 6 }];
+export const house_whine = [
+	{
+		title: `All house wine: Chardonnay,  Cabernet Sauvignon, Merot, Resling`,
+		price: 6,
+		image: 'img/blurr_bar.jpg'
+	}
+];
 export const white_whine = [
-	{ title: 'Chardonnay Kendall Jackson', price: 8, bottle: 30 },
-	{ title: 'Pinot Gris Duck Pond', price: 7, bottle: 26 },
-	{ title: 'Riesling Chateau St. Michelle', price: 7, bottle: 26 },
-	{ title: 'Pinot Grigio House', price: 6, bottle: 22 }
+	{ title: 'Chardonnay Kendall Jackson', price: 8, bottle: 30, image: 'img/kendall.jpg' },
+	{ title: 'Pinot Gris Duck Pond', price: 7, bottle: 26, image: 'img/gris.jpg' },
+	{ title: 'Riesling Chateau St. Michelle', price: 7, bottle: 26, image: 'img/resi.jpg' },
+	{ title: 'Pinot Grigio House', price: 6, bottle: 22, image: 'img/pinot.jpg' }
 ];
 export const red_whine = [
-	{ title: 'Cabernet 14 hands', price: 7, bottle: 26 },
-	{ title: 'Kendall Jackson Pinot Noir ', price: 8, bottle: 30 }
+	{ title: 'Cabernet 14 hands', price: 7, bottle: 26, image: 'img/whine.jpg' },
+	{ title: 'Kendall Jackson Pinot Noir ', price: 8, bottle: 30, image: 'img/Noire.jpg' }
 ];
